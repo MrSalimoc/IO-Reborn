@@ -21,7 +21,7 @@ public class SensorTileEntity extends TileEntity implements ITickableTileEntity 
 
     public SensorTileEntity() {
         super(Registration.SENSOR_TILEENTITY.get());
-        ClientRegistry.bindTileEntityRenderer(Registration.SENSOR_TILEENTITY.get(), (dispatcher) -> new SensorTileEntityRenderer(dispatcher));
+
     }
 
     @Override

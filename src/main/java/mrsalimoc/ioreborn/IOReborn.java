@@ -1,5 +1,6 @@
 package mrsalimoc.ioreborn;
 
+import mrsalimoc.ioreborn.client.ClientSetup;
 import mrsalimoc.ioreborn.common.blocks.Blocks;
 import mrsalimoc.ioreborn.utils.Registration;
 import net.minecraft.block.Block;
@@ -62,6 +63,7 @@ public class IOReborn
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
         LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().options);
+        ClientSetup.init(event);
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)

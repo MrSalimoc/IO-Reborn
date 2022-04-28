@@ -1,6 +1,6 @@
 {
 	"credit": "Made with Blockbench",
-	"texture_size": [64, 64],
+	"texture_size": [128, 128],
 	"textures": {
 		"0": "ioreborn:block/sensor"
 	},
@@ -11,73 +11,15 @@
 			"to": [16, 4, 16],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 2, 8]},
 			"faces": {
-				"north": {"uv": [4, 4, 8, 5], "texture": "#0"},
-				"east": {"uv": [0, 4, 4, 5], "texture": "#0"},
-				"south": {"uv": [12, 4, 16, 5], "texture": "#0"},
-				"west": {"uv": [8, 4, 12, 5], "texture": "#0"},
+				"north": {"uv": [4, 4, 8, 5.125], "texture": "#0"},
+				"east": {"uv": [0, 4, 4, 5.125], "texture": "#0"},
+				"south": {"uv": [12, 4, 16, 5.125], "texture": "#0"},
+				"west": {"uv": [8, 4, 12, 5.125], "texture": "#0"},
 				"up": {"uv": [8, 4, 4, 0], "texture": "#0"},
 				"down": {"uv": [12, 0, 8, 4], "texture": "#0"}
 			}
-		},
-		{
-			"name": "support",
-			"from": [7.5, 4, 7.5],
-			"to": [8.5, 8, 8.5],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8.5, 8.34645]},
-			"faces": {
-				"north": {"uv": [0.25, 0.25, 0.5, 1.25], "texture": "#0"},
-				"east": {"uv": [0, 0.25, 0.25, 1.25], "texture": "#0"},
-				"south": {"uv": [0.75, 0.25, 1, 1.25], "texture": "#0"},
-				"west": {"uv": [0.5, 0.25, 0.75, 1.25], "texture": "#0"},
-				"up": {"uv": [0.5, 0.25, 0.25, 0], "texture": "#0"},
-				"down": {"uv": [0.75, 0, 0.5, 0.25], "texture": "#0"}
-			}
-		},
-		{
-			"name": "antenna_left",
-			"from": [1.05125, 8, 6.17161],
-			"to": [5.05125, 14, 7.17161],
-			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 8.5, 8.34645]},
-			"faces": {
-				"north": {"uv": [8.25, 6.25, 9.25, 7.75], "texture": "#0"},
-				"east": {"uv": [8, 6.25, 8.25, 7.75], "texture": "#0"},
-				"south": {"uv": [9.5, 6.25, 10.5, 7.75], "texture": "#0"},
-				"west": {"uv": [9.25, 6.25, 9.5, 7.75], "texture": "#0"},
-				"up": {"uv": [9.25, 6.25, 8.25, 6], "texture": "#0"},
-				"down": {"uv": [10.25, 6, 9.25, 6.25], "texture": "#0"}
-			}
-		},
-		{
-			"name": "antenna_center",
-			"from": [4.5, 8, 7.5],
-			"to": [11.5, 14, 8.5],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8.5, 8.34645]},
-			"faces": {
-				"north": {"uv": [0.25, 6.25, 2, 7.75], "texture": "#0"},
-				"east": {"uv": [0, 6.25, 0.25, 7.75], "texture": "#0"},
-				"south": {"uv": [2.25, 6.25, 4, 7.75], "texture": "#0"},
-				"west": {"uv": [2, 6.25, 2.25, 7.75], "texture": "#0"},
-				"up": {"uv": [2, 6.25, 0.25, 6], "texture": "#0"},
-				"down": {"uv": [3.75, 6, 2, 6.25], "texture": "#0"}
-			}
-		},
-		{
-			"name": "antenna_right",
-			"from": [10.94875, 8, 6.17161],
-			"to": [14.94875, 14, 7.17161],
-			"shade": false,
-			"rotation": {"angle": -22.5, "axis": "y", "origin": [8, 8.5, 8.34645]},
-			"faces": {
-				"north": {"uv": [13.25, 6.25, 12.25, 7.75], "texture": "#0"},
-				"east": {"uv": [13.5, 6.25, 13.25, 7.75], "texture": "#0"},
-				"south": {"uv": [14.5, 6.25, 13.5, 7.75], "texture": "#0"},
-				"west": {"uv": [12.25, 6.25, 12, 7.75], "texture": "#0"},
-				"up": {"uv": [12.25, 6.25, 13.25, 6], "texture": "#0"},
-				"down": {"uv": [13.25, 6, 14.25, 6.25], "texture": "#0"}
-			}
 		}
 	],
-	"display": {},
 	"groups": [
 		0,
 		{
