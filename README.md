@@ -1,4 +1,4 @@
 # IO Reborn
-A new reimplementation of IO Reborn mod with some enhancement for CC:Tweaked mod, originally created by richie3366
+IO Reborn is a new reimplementation of IO-Peripheral (by richie3366), OpenCCSensors (by Cloudhunter) mods and others with some enhancement for CC:Tweaked mod and new Minecraft updates.
 
 ## Soon documentation/wiki
