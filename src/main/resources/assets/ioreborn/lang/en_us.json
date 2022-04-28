@@ -1,0 +1,8 @@
+{
+    "block.ioreborn.energy_meter": "Energy Meter",
+    "block.ioreborn.sensor": "Sensor",
+
+    "item.ioreborn.proximity_card": "Proximity Card",
+
+    "itemGroup.ioreborn": "IO Reborn"
+}

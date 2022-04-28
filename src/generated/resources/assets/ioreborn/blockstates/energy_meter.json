@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ioreborn:block/energy_meter"
+    },
+    "facing=south": {
+      "model": "ioreborn:block/energy_meter",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ioreborn:block/energy_meter",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "ioreborn:block/energy_meter",
+      "y": 90
+    }
+  }
+}

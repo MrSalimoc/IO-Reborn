@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "side": "ioreborn:block/energy_meter_side",
+    "front": "ioreborn:block/energy_meter_front",
+    "top": "ioreborn:block/energy_meter_top"
+  }
+}
