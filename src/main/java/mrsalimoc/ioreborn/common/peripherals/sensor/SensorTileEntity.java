@@ -31,6 +31,8 @@ public class SensorTileEntity extends TileEntity implements ITickableTileEntity 
 
     protected SensorPeripheral peripheral = new SensorPeripheral(this);
     private LazyOptional<IPeripheral> peripheralCap;
+    private int maxRange = 20;
+    private int scanRange = 20;
 
     @Override
     public <T> LazyOptional<T> getCapability(Capability<T> cap, Direction direction) {
@@ -45,8 +47,8 @@ public class SensorTileEntity extends TileEntity implements ITickableTileEntity 
     }
 
     public String[] getEntitiesInRange() {
-        BlockPos topCorner = this.worldPosition.offset(10, 10, 10);
-        BlockPos bottomCorner = this.worldPosition.offset(-10, -10, -10);
+        BlockPos topCorner = this.worldPosition.offset(scanRange, scanRange, scanRange);
+        BlockPos bottomCorner = this.worldPosition.offset(-scanRange, -scanRange, -scanRange);
         AxisAlignedBB box = new AxisAlignedBB(topCorner, bottomCorner);
         List<Entity> entities = this.getTileEntity().getLevel().getEntities(null, box);
 
@@ -57,5 +59,21 @@ public class SensorTileEntity extends TileEntity implements ITickableTileEntity 
             facesArray[i] = String.valueOf(entities.get(i).getDisplayName().getString());
         }
         return facesArray;
+    }
+
+    public int getMaxRange() {
+        return this.maxRange;
+    }
+
+    public int getRange() {
+        return this.scanRange;
+    }
+
+    public boolean setRange(int range) {
+        if(range > this.maxRange || range < 0) {
+            return false;
+        } else {
+            return true;
+        }
     }
 }

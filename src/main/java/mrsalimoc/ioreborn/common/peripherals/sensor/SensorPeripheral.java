@@ -43,8 +43,33 @@ public class SensorPeripheral implements IPeripheral {
         return tileEntity;
     }
 
-    @LuaFunction
+    /*@LuaFunction
     public final String[] getEntities() {
         return getTileEntity().getEntitiesInRange();
+    }*/
+
+    @LuaFunction
+    public final int getMaxRange() {
+        return getTileEntity().getMaxRange();
+    }
+
+    @LuaFunction
+    public final int getRange() {
+        return getTileEntity().getRange();
+    }
+
+    @LuaFunction
+    public final boolean setRange(int range) {
+        return getTileEntity().setRange(range);
+    }
+
+    @LuaFunction
+    public final String[] getTargets() {
+        return getTileEntity().getEntitiesInRange();
+    }
+
+    @LuaFunction
+    public final String getTargetDetails(String key) {
+        return "WORK IN PROGRESS LOL";
     }
 }

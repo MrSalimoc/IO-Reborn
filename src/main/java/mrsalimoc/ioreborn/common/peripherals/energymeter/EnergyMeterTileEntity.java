@@ -128,6 +128,10 @@ public class EnergyMeterTileEntity extends TileEntity implements ITickableTileEn
 
         if(outputEnergySpaceLeft <= 0.0f || inputEnergyStored <= 0.0f || allowOutput == false) {
             //Pas de passage
+            if (facesEnergy.containsKey(direction)) {
+                facesEnergy.remove(direction);
+                facesEnergy.put(direction, 0.0f);
+            }
         } else {
             if (inputEnergyStored >= outputEnergySpaceLeft) {
                 float energyToTransfer = outputEnergySpaceLeft / directionArray.size();
