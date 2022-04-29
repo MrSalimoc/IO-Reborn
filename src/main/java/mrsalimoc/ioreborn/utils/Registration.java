@@ -4,6 +4,7 @@ import com.google.common.collect.Sets;
 import mrsalimoc.ioreborn.IOReborn;
 import mrsalimoc.ioreborn.common.blocks.Blocks;
 import mrsalimoc.ioreborn.common.items.Items;
+import mrsalimoc.ioreborn.common.peripherals.cryptographic_accelerator.CryptographicAcceleratorTileEntity;
 import mrsalimoc.ioreborn.common.peripherals.energymeter.EnergyMeterTileEntity;
 import mrsalimoc.ioreborn.common.peripherals.sensor.SensorTileEntity;
 import net.minecraft.block.Block;
@@ -22,6 +23,8 @@ public class Registration {
 
     public static final RegistryObject<TileEntityType<EnergyMeterTileEntity>> ENERGY_METER_TILEENTITY = Registration.TILE_ENTITIES.register("energy_meter", () -> new TileEntityType<>(EnergyMeterTileEntity::new, Sets.newHashSet(Blocks.ENERGY_METER.get()), null));
     public static final RegistryObject<TileEntityType<SensorTileEntity>> SENSOR_TILEENTITY = Registration.TILE_ENTITIES.register("sensor", () -> new TileEntityType<>(SensorTileEntity::new, Sets.newHashSet(Blocks.SENSOR.get()), null));
+    public static final RegistryObject<TileEntityType<CryptographicAcceleratorTileEntity>> CRYPTOGRAPHIC_ACCELERATOR_TILEENTITY = Registration.TILE_ENTITIES.register("cryptographic_accelerator", () -> new TileEntityType<>(CryptographicAcceleratorTileEntity::new, Sets.newHashSet(Blocks.SENSOR.get()), null));
+
 
     public static void register() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();

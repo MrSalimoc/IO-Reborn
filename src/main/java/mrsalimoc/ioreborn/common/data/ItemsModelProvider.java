@@ -16,7 +16,8 @@ public class ItemsModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        withExistingParent("sensor", modLoc("block/sensor"));
+        //withExistingParent("sensor", modLoc("block/sensor"));
+        //withExistingParent("cryptographic_accelerator", modLoc("block/cryptographic_accelerator"));
 
         ModelFile itemGenerated = getExistingFile(mcLoc("item/generated"));
 

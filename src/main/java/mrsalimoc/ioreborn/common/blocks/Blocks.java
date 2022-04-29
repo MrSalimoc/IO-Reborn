@@ -1,6 +1,7 @@
 package mrsalimoc.ioreborn.common.blocks;
 
 import mrsalimoc.ioreborn.IOReborn;
+import mrsalimoc.ioreborn.common.peripherals.cryptographic_accelerator.CryptographicAcceleratorBlock;
 import mrsalimoc.ioreborn.common.peripherals.energymeter.EnergyMeterBlock;
 import mrsalimoc.ioreborn.common.peripherals.sensor.SensorBlock;
 import mrsalimoc.ioreborn.utils.Registration;
@@ -17,6 +18,8 @@ public class Blocks {
 
     public static final RegistryObject<Block> ENERGY_METER = register("energy_meter", () -> new EnergyMeterBlock(AbstractBlock.Properties.of(Material.STONE).strength(1.0f)));
     public static final RegistryObject<Block> SENSOR = register("sensor", () -> new SensorBlock(AbstractBlock.Properties.of(Material.STONE).strength(1.0f)));
+    public static final RegistryObject<Block> CRYPTOGRAPHIC_ACCELERATOR = register("cryptographic_accelerator", () -> new CryptographicAcceleratorBlock(AbstractBlock.Properties.of(Material.STONE).strength(1.0f)));
+
 
     public static void register() {
 

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ioreborn:block/cryptographic_accelerator"
+    },
+    "facing=south": {
+      "model": "ioreborn:block/cryptographic_accelerator",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ioreborn:block/cryptographic_accelerator",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "ioreborn:block/cryptographic_accelerator",
+      "y": 90
+    }
+  }
+}
