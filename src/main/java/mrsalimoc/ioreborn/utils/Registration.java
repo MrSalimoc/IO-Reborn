@@ -5,7 +5,7 @@ import mrsalimoc.ioreborn.IOReborn;
 import mrsalimoc.ioreborn.common.blocks.Blocks;
 import mrsalimoc.ioreborn.common.items.Items;
 import mrsalimoc.ioreborn.common.peripherals.cryptographic_accelerator.CryptographicAcceleratorTileEntity;
-import mrsalimoc.ioreborn.common.peripherals.energymeter.EnergyMeterTileEntity;
+import mrsalimoc.ioreborn.common.peripherals.energy_meter.EnergyMeterTileEntity;
 import mrsalimoc.ioreborn.common.peripherals.sensor.SensorTileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;

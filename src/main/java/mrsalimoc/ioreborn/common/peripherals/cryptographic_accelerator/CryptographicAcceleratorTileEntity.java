@@ -1,14 +1,11 @@
 package mrsalimoc.ioreborn.common.peripherals.cryptographic_accelerator;
 
 import dan200.computercraft.api.peripheral.IPeripheral;
-import mrsalimoc.ioreborn.common.peripherals.energymeter.EnergyMeterPeripheral;
 import mrsalimoc.ioreborn.utils.Registration;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.Direction;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.energy.CapabilityEnergy;
 
 import static dan200.computercraft.shared.Capabilities.CAPABILITY_PERIPHERAL;
 

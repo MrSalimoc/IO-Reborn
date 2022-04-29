@@ -2,7 +2,7 @@ package mrsalimoc.ioreborn.common.blocks;
 
 import mrsalimoc.ioreborn.IOReborn;
 import mrsalimoc.ioreborn.common.peripherals.cryptographic_accelerator.CryptographicAcceleratorBlock;
-import mrsalimoc.ioreborn.common.peripherals.energymeter.EnergyMeterBlock;
+import mrsalimoc.ioreborn.common.peripherals.energy_meter.EnergyMeterBlock;
 import mrsalimoc.ioreborn.common.peripherals.sensor.SensorBlock;
 import mrsalimoc.ioreborn.utils.Registration;
 import net.minecraft.block.AbstractBlock;

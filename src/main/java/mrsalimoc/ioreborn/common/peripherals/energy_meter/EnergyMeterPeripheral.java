@@ -1,4 +1,4 @@
-package mrsalimoc.ioreborn.common.peripherals.energymeter;
+package mrsalimoc.ioreborn.common.peripherals.energy_meter;
 
 import dan200.computercraft.api.lua.LuaFunction;
 import dan200.computercraft.api.peripheral.IComputerAccess;
