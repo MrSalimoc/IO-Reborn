@@ -1,0 +1,8 @@
+{
+    "parent": "block/orientable",
+    "textures": {
+        "top": "ioreborn:block/bottom",
+        "front": "ioreborn:block/mag_card_reader_side_1",
+        "side": "ioreborn:block/side"
+    }
+}

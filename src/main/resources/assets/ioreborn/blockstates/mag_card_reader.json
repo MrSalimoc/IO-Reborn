@@ -1,0 +1,28 @@
+{
+    "variants": {
+        "facing=north,reader_state=0":  { "model": "ioreborn:block/mag_card_reader" },
+        "facing=east,reader_state=0":   { "model": "ioreborn:block/mag_card_reader", "y": 90 },
+        "facing=south,reader_state=0":   { "model": "ioreborn:block/mag_card_reader", "y": 180 },
+        "facing=west,reader_state=0":   { "model": "ioreborn:block/mag_card_reader", "y": 270 },
+        
+        "facing=north,reader_state=1":  { "model": "ioreborn:block/mag_card_reader_idle" },
+        "facing=east,reader_state=1":   { "model": "ioreborn:block/mag_card_reader_idle", "y": 90 },
+        "facing=south,reader_state=1":   { "model": "ioreborn:block/mag_card_reader_idle", "y": 180 },
+        "facing=west,reader_state=1":   { "model": "ioreborn:block/mag_card_reader_idle", "y": 270 },
+
+        "facing=north,reader_state=2":  { "model": "ioreborn:block/mag_card_reader_read_wait" },
+        "facing=east,reader_state=2":   { "model": "ioreborn:block/mag_card_reader_read_wait", "y": 90 },
+        "facing=south,reader_state=2":   { "model": "ioreborn:block/mag_card_reader_read_wait", "y": 180 },
+        "facing=west,reader_state=2":   { "model": "ioreborn:block/mag_card_reader_read_wait", "y": 270 },
+
+        "facing=north,reader_state=3":  { "model": "ioreborn:block/mag_card_reader_write_wait" },
+        "facing=east,reader_state=3":   { "model": "ioreborn:block/mag_card_reader_write_wait", "y": 90 },
+        "facing=south,reader_state=3":   { "model": "ioreborn:block/mag_card_reader_write_wait", "y": 180 },
+        "facing=west,reader_state=3":   { "model": "ioreborn:block/mag_card_reader_write_wait", "y": 270 },
+
+        "facing=north,reader_state=4":  { "model": "ioreborn:block/mag_card_reader_write" },
+        "facing=east,reader_state=4":   { "model": "ioreborn:block/mag_card_reader_write", "y": 90 },
+        "facing=south,reader_state=4":   { "model": "ioreborn:block/mag_card_reader_write", "y": 180 },
+        "facing=west,reader_state=4":   { "model": "ioreborn:block/mag_card_reader_write", "y": 270 }
+    }
+}

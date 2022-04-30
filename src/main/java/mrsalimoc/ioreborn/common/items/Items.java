@@ -7,7 +7,7 @@ import net.minecraftforge.fml.RegistryObject;
 
 public class Items {
 
-    public static final RegistryObject<Item> PROXIMITY_CARD = Registration.ITEMS.register("proximity_card", () -> new Item(new Item.Properties().tab(IOReborn.IO_TAB)));
+    public static final RegistryObject<Item> PROXIMITY_CARD = Registration.ITEMS.register("proximity_card", () -> new ProximityCardItem(new Item.Properties().tab(IOReborn.IO_TAB)));
 
     public static void register() {
 

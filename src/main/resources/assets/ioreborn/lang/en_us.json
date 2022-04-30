@@ -1,8 +1,23 @@
 {
     "block.ioreborn.energy_meter": "Energy Meter",
     "block.ioreborn.sensor": "Sensor",
-
+    "block.ioreborn.cryptographic_accelerator": "Cryptographic Accelerator",
+    "block.ioreborn.mag_card_reader": "Mag Card Reader",
+    
     "item.ioreborn.proximity_card": "Proximity Card",
 
-    "itemGroup.ioreborn": "IO Reborn"
+    "itemGroup.ioreborn": "IO Reborn",
+
+    "tooltip.ioreborn.hint": "Hold \u00A7b[CTRL + SHIFT]\u00A7r for informations.",
+    "tooltip.ioreborn.methods": "Hold \u00A7a[ALT]\u00A7r to see LUA functions.",
+    "tooltip.ioreborn.energy_meter.description": "TODO DESC LMAO",
+    "tooltip.ioreborn.energy_meter.methods": "TODO METHODS LMAO",
+    "tooltip.ioreborn.sensor.description": "TODO DESC LMAO",
+    "tooltip.ioreborn.sensor.methods": "TODO METHODS LMAO",
+    "tooltip.ioreborn.cryptographic_accelerator.description": "TODO DESC LMAO",
+    "tooltip.ioreborn.cryptographic_accelerator.methods": "TODO METHODS LMAO",
+    "tooltip.ioreborn.mag_card_reader.description": "TODO DESC LMAO",
+    "tooltip.ioreborn.mag_card_reader.methods": "TODO METHODS LMAO",
+
+    "tooltip.ioreborn.proximity_card.description": "Just a random item, no utility for now"
 }

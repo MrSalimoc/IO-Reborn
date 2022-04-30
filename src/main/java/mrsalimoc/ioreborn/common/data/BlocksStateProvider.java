@@ -23,7 +23,6 @@ public class BlocksStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         registerEnergyMeter((EnergyMeterBlock) Blocks.ENERGY_METER.get());
-        //registerCryptographicAccelerator((CryptographicAcceleratorBlock) Blocks.CRYPTOGRAPHIC_ACCELERATOR.get());
         simpleBlock(Blocks.SENSOR.get());
     }
 
@@ -43,24 +42,6 @@ public class BlocksStateProvider extends BlockStateProvider {
         }
 
         simpleBlockItem( block, models().getBuilder("energy_meter") );
-    }
-
-    private void registerCryptographicAccelerator(CryptographicAcceleratorBlock block) {
-        VariantBlockStateBuilder builder = getVariantBuilder(block);
-        BlockModelBuilder model = models().orientable(
-                "cryptographic_accelerator",
-                blockTexture(block, ""),
-                blockTexture(block, ""),
-                blockTexture(block, "")
-        );
-
-        for(Direction facing : CryptographicAcceleratorBlock.FACING.getPossibleValues()) {
-            builder.partialState()
-                    .with(CryptographicAcceleratorBlock.FACING, facing)
-                    .addModels(new ConfiguredModel(model, 0, toYAngle(facing), false));
-        }
-
-        simpleBlockItem( block, models().getBuilder("cryptographic_accelerator") );
     }
 
     private static ResourceLocation blockTexture(Block block, String suffix )

@@ -2,17 +2,25 @@ package mrsalimoc.ioreborn.common.peripherals.energy_meter;
 
 
 import mrsalimoc.ioreborn.utils.Registration;
+import mrsalimoc.ioreborn.utils.TextComponentUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.item.ItemStack;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Direction;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextFormatting;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.IBlockReader;
 
 import javax.annotation.Nullable;
+import java.util.List;
 
 public class EnergyMeterBlock extends Block {
 
@@ -22,6 +30,23 @@ public class EnergyMeterBlock extends Block {
         super(properties);
         registerDefaultState(defaultBlockState().setValue(FACING, Direction.NORTH));
 
+    }
+
+    @Override
+    public void appendHoverText(ItemStack p_190948_1_, @Nullable IBlockReader p_190948_2_, List<ITextComponent> tooltip, ITooltipFlag p_190948_4_) {
+        if(Screen.hasControlDown() && Screen.hasShiftDown()) {
+            tooltip.add(1, TextComponentUtil.build(TextFormatting.GRAY, new TranslationTextComponent("tooltip.ioreborn.energy_meter.description")));
+        } else if(Screen.hasAltDown()) {
+            tooltip.add(1, TextComponentUtil.build(TextFormatting.GRAY, new TranslationTextComponent("tooltip.ioreborn.energy_meter.methods")));
+        } else {
+            tooltip.add(1, TextComponentUtil.build(new TranslationTextComponent("tooltip.ioreborn.hint")));
+            tooltip.add(2, TextComponentUtil.build(new TranslationTextComponent("tooltip.ioreborn.methods")));
+        }
+    }
+
+    @Override
+    public String getDescriptionId() {
+        return TextFormatting.YELLOW + new TranslationTextComponent("block.ioreborn.energy_meter").getString();
     }
 
     @Override
