@@ -1,8 +1,10 @@
 package mrsalimoc.ioreborn.common.peripherals.mag_card_reader;
 
+import mrsalimoc.ioreborn.IOReborn;
 import mrsalimoc.ioreborn.common.blocks.Blocks;
 import mrsalimoc.ioreborn.utils.Registration;
 import mrsalimoc.ioreborn.utils.TextComponentUtil;
+import mrsalimoc.ioreborn.utils.ToolTipUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.gui.screen.Screen;
@@ -23,8 +25,11 @@ import net.minecraft.util.text.*;
 import net.minecraft.util.text.Color;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import org.apache.logging.log4j.Level;
 
 import javax.annotation.Nullable;
 import java.awt.*;
@@ -41,22 +46,29 @@ public class MagCardReaderBlock extends Block {
         registerDefaultState(defaultBlockState().setValue(STATE, 0));
     }
 
+    @OnlyIn(Dist.CLIENT)
     @Override
-    public void appendHoverText(ItemStack p_190948_1_, @Nullable IBlockReader p_190948_2_, List<ITextComponent> tooltip, ITooltipFlag p_190948_4_) {
-        if(Screen.hasControlDown() && Screen.hasShiftDown()) {
-            tooltip.add(1, TextComponentUtil.build(TextFormatting.GRAY, new TranslationTextComponent("tooltip.ioreborn.mag_card_reader.description")));
-        } else if(Screen.hasAltDown()) {
-            tooltip.add(1, TextComponentUtil.build(TextFormatting.GRAY, new TranslationTextComponent("tooltip.ioreborn.mag_card_reader.methods")));
-        } else {
-            tooltip.add(1, TextComponentUtil.build(new TranslationTextComponent("tooltip.ioreborn.hint")));
-            tooltip.add(2, TextComponentUtil.build(new TranslationTextComponent("tooltip.ioreborn.methods")));
-        }
+    public IFormattableTextComponent getName() {
+        Style cachedStyle = Style.EMPTY;
+        cachedStyle.withColor(TextFormatting.AQUA);
+        TranslationTextComponent text = new TranslationTextComponent("block.ioreborn.sensor");
+        text.setStyle(cachedStyle);
+        text.append("test");
+
+        IOReborn.LOGGER.log(Level.DEBUG, "FDP: " + text.toString());
+
+        return text;
     }
 
     @Override
+    public void appendHoverText(ItemStack p_190948_1_, @Nullable IBlockReader p_190948_2_, List<ITextComponent> tooltip, ITooltipFlag p_190948_4_) {
+        ToolTipUtil.getBlockTooltip("mag_card_reader", tooltip);
+    }
+
+    /*@Override
     public String getDescriptionId() {
         return TextFormatting.YELLOW + new TranslationTextComponent("block.ioreborn.mag_card_reader").getString();
-    }
+    }*/
 
 
 

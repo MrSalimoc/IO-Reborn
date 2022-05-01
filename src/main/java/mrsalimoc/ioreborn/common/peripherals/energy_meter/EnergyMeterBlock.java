@@ -3,6 +3,7 @@ package mrsalimoc.ioreborn.common.peripherals.energy_meter;
 
 import mrsalimoc.ioreborn.utils.Registration;
 import mrsalimoc.ioreborn.utils.TextComponentUtil;
+import mrsalimoc.ioreborn.utils.ToolTipUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.gui.screen.Screen;
@@ -34,20 +35,13 @@ public class EnergyMeterBlock extends Block {
 
     @Override
     public void appendHoverText(ItemStack p_190948_1_, @Nullable IBlockReader p_190948_2_, List<ITextComponent> tooltip, ITooltipFlag p_190948_4_) {
-        if(Screen.hasControlDown() && Screen.hasShiftDown()) {
-            tooltip.add(1, TextComponentUtil.build(TextFormatting.GRAY, new TranslationTextComponent("tooltip.ioreborn.energy_meter.description")));
-        } else if(Screen.hasAltDown()) {
-            tooltip.add(1, TextComponentUtil.build(TextFormatting.GRAY, new TranslationTextComponent("tooltip.ioreborn.energy_meter.methods")));
-        } else {
-            tooltip.add(1, TextComponentUtil.build(new TranslationTextComponent("tooltip.ioreborn.hint")));
-            tooltip.add(2, TextComponentUtil.build(new TranslationTextComponent("tooltip.ioreborn.methods")));
-        }
+        ToolTipUtil.getBlockTooltip("energy_meter", tooltip);
     }
 
-    @Override
+    /*@Override
     public String getDescriptionId() {
         return TextFormatting.YELLOW + new TranslationTextComponent("block.ioreborn.energy_meter").getString();
-    }
+    }*/
 
     @Override
     protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> builder) {

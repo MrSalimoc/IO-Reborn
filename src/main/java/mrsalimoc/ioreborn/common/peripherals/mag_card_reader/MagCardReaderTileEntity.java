@@ -48,25 +48,11 @@ public class MagCardReaderTileEntity extends TileEntity implements ITickableTile
 
     @Override
     public void tick() {
-        /*if(this.level != null) {
-            switch (state) {
-                case STATE_OFF:
-                    this.level.setBlockAndUpdate(worldPosition, this.getBlockState().setValue(MagCardReaderBlock.STATE, STATE_OFF));
-                    break;
-                case STATE_IDLE:
-                    this.level.setBlockAndUpdate(worldPosition, this.getBlockState().setValue(MagCardReaderBlock.STATE, STATE_IDLE));
-                    break;
-                case STATE_READ_WAIT:
-                    this.level.setBlockAndUpdate(worldPosition, this.getBlockState().setValue(MagCardReaderBlock.STATE, STATE_READ_WAIT));
-                    break;
-                case STATE_WRITE_WAIT:
-                    this.level.setBlockAndUpdate(worldPosition, this.getBlockState().setValue(MagCardReaderBlock.STATE, STATE_WRITE_WAIT));
-                    break;
-                case STATE_WRITE:
-                    this.level.setBlockAndUpdate(worldPosition, this.getBlockState().setValue(MagCardReaderBlock.STATE, STATE_WRITE));
-                    break;
-            }
-        }*/
+        if(peripheral.connectedComputers.size() > 0) {
+            setBlockState(STATE_IDLE);
+        } else {
+            setBlockState(STATE_OFF);
+        }
     }
 
 
