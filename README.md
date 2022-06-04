@@ -15,6 +15,8 @@ You might think where thoses ideas came from ? That's right, saddly we didn't cr
 - [ ] RFID Writer
 - [ ] Biometric Scanner
 - [ ] Keypad
+### Multiblocks
+- [ ] Electromagnetic Pulse Generator -- Eteindre tous les pc dans un rayon d'un coup | Empêcher la communication pendant un terme
 ### Items
 - [ ] Mag Card
 - [ ] RFID Card
