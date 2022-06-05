@@ -19,6 +19,10 @@ public class TextComponentUtil {
                 .withColor(Color.fromRgb(color)));
     }
 
+    public static int RGBA(int r, int g, int b, int a) {
+        return (a << 24) | ((r & 255) << 16) | ((g & 255) << 8) | (b & 255);
+    }
+
     public static IFormattableTextComponent build(Object... components) {
         //TODO: Verify that just appending them to the first text component works properly.
         // My suspicion is we will need to chain downwards and append it that way so that the formatting matches
