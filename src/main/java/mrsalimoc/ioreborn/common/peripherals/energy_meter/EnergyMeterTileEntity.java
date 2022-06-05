@@ -3,6 +3,7 @@ package mrsalimoc.ioreborn.common.peripherals.energy_meter;
 import dan200.computercraft.api.peripheral.IPeripheral;
 import mrsalimoc.ioreborn.common.IOEnergy;
 import mrsalimoc.ioreborn.utils.Registration;
+import mrsalimoc.ioreborn.utils.TextComponentUtil;
 import net.minecraft.block.BlockState;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.NetworkManager;
@@ -10,8 +11,10 @@ import net.minecraft.network.play.server.SUpdateTileEntityPacket;
 import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Direction;
+import net.minecraft.util.ICharacterConsumer;
 import net.minecraft.util.IReorderingProcessor;
 import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.capabilities.Capability;
@@ -37,7 +40,6 @@ public class EnergyMeterTileEntity extends TileEntity implements ITickableTileEn
     }
 
     protected EnergyMeterPeripheral peripheral = new EnergyMeterPeripheral(this);
-    private final IReorderingProcessor[] renderMessages = new IReorderingProcessor[4];
     private LazyOptional<IPeripheral> peripheralCap;
     private LazyOptional<EnergyStorage> energy;
     private int transferRate = 0;
@@ -99,6 +101,7 @@ public class EnergyMeterTileEntity extends TileEntity implements ITickableTileEn
         this.setPosition(pkt.getPos());
         this.load(this.getBlockState(), pkt.getTag());
     }
+
 
     @Nullable
     public String getRenderMessage() {

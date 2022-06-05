@@ -1,6 +1,7 @@
 package mrsalimoc.ioreborn.common.peripherals.energy_meter;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
+import com.mojang.blaze3d.platform.GlStateManager;
 import dan200.computercraft.client.gui.FixedWidthFontRenderer;
 import dan200.computercraft.shared.peripheral.monitor.TileMonitor;
 import dan200.computercraft.shared.util.DirectionUtil;
@@ -8,11 +9,15 @@ import mrsalimoc.ioreborn.IOReborn;
 import mrsalimoc.ioreborn.common.peripherals.sensor.SensorTileEntity;
 import mrsalimoc.ioreborn.common.peripherals.sensor.SensorTileEntityRenderer;
 import mrsalimoc.ioreborn.utils.Registration;
+import mrsalimoc.ioreborn.utils.TextComponentUtil;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.WallSignBlock;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
+import net.minecraft.client.renderer.GLAllocation;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
+import net.minecraft.client.renderer.LightTexture;
+import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.texture.NativeImage;
 import net.minecraft.client.renderer.tileentity.TileEntityRenderer;
 import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
@@ -21,18 +26,19 @@ import net.minecraft.util.Direction;
 import net.minecraft.util.IReorderingProcessor;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.vector.Vector3f;
+import net.minecraft.util.text.*;
 import net.minecraft.util.text.Color;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.ITextProperties;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import org.apache.logging.log4j.Level;
+import sun.awt.image.PixelConverter;
 
+import javax.swing.text.Style;
 import java.awt.*;
 import java.util.List;
 
+@OnlyIn(Dist.CLIENT)
 public class EnergyMeterTileEntityRenderer extends TileEntityRenderer<EnergyMeterTileEntity>  {
 
     public EnergyMeterTileEntityRenderer(TileEntityRendererDispatcher p_i226006_1_) {
@@ -57,22 +63,22 @@ public class EnergyMeterTileEntityRenderer extends TileEntityRenderer<EnergyMete
         matrixStack.scale(0.010116667F, -0.010116667F, 0.010116667F);
         int i = DyeColor.WHITE.getTextColor();
         double d0 = 0.4D;
-        int j = (int)((double) NativeImage.getR(i) * 0.4D);
+        int j = (int)((double)NativeImage.getR(i) * 0.4D);
         int k = (int)((double)NativeImage.getG(i) * 0.4D);
         int l = (int)((double)NativeImage.getB(i) * 0.4D);
         int i1 = NativeImage.combine(0, l, k, j);
         int j1 = 20;
 
-        for(int k1 = 0; k1 < 1; ++k1) {
-            String text = te.getRenderMessage();
-            //IOReborn.LOGGER.log(Level.DEBUG, "rendertest: " + text);
-            if (text != null) {
-                float f3 = (float)(-fontrenderer.width(text) / 2);
+        //String text = te.getRenderMessage();
 
-                fontrenderer.drawInBatch(text, f3, (float)(k1 * 10 - 20), i1, false, matrixStack.last().pose(), p_225616_4_, false, 0, p_225616_5_);
-            }
+        String text = te.getRenderMessage();
+        //IOReborn.LOGGER.log(Level.DEBUG, "rendertest: " + text);
+        //IOReborn.LOGGER.log(Level.DEBUG, "combinedlight: " + p_225616_5_ + " combinedOverlay: " + p_225616_6_);
+        if (text != null) {
+            float f3 = (float)(-fontrenderer.width(text) / 2);
+
+            fontrenderer.drawInBatch(text, f3, (float)(1 * 10 - 20), DyeColor.WHITE.getTextColor(), false, matrixStack.last().pose(), p_225616_4_, false, 0, 15728640);
         }
-
         /*float f3 = (float)(-fontrenderer.width(te.getPeripheralLabel()) / 2);
         fontrenderer.drawInBatch(te.getPeripheralLabel(), f3, (float)(1 * 10 - 20), TextFormatting.WHITE.getColor(), false, matrixStack.last().pose(), p_225616_4_, false, 0, p_225616_5_);
         */
