@@ -48,11 +48,11 @@ public class MagCardReaderTileEntity extends TileEntity implements ITickableTile
 
     @Override
     public void tick() {
-        if(peripheral.connectedComputers.size() > 0) {
+        /*if(peripheral.connectedComputers.size() > 0) {
             setBlockState(STATE_IDLE);
         } else {
             setBlockState(STATE_OFF);
-        }
+        }*/
     }
 
 

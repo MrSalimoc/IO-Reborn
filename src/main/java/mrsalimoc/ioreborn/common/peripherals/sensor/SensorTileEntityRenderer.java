@@ -24,10 +24,13 @@ import net.minecraft.item.Items;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.vector.Quaternion;
 import net.minecraft.util.math.vector.Vector3f;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.model.data.EmptyModelData;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 
 import java.util.Random;
+
 
 public class SensorTileEntityRenderer extends TileEntityRenderer<SensorTileEntity> {
 
@@ -87,6 +90,7 @@ public class SensorTileEntityRenderer extends TileEntityRenderer<SensorTileEntit
         matrixStack.translate(.5, .5, .5);
         matrixStack.mulPose(rotation);
         matrixStack.scale(scale, scale, scale);
+
 
         model.renderToBuffer(matrixStack, builder, combinedLight, combinedOverlay, 1, 1, 1, 1);
 
