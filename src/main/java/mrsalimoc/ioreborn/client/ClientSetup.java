@@ -2,6 +2,7 @@ package mrsalimoc.ioreborn.client;
 
 import mrsalimoc.ioreborn.IOReborn;
 import mrsalimoc.ioreborn.common.blocks.Blocks;
+import mrsalimoc.ioreborn.common.peripherals.energy_meter.EnergyMeterTileEntityRenderer;
 import mrsalimoc.ioreborn.common.peripherals.sensor.SensorTileEntityRenderer;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -19,6 +20,7 @@ public class ClientSetup {
 
     public static void init(final FMLClientSetupEvent event) {
         SensorTileEntityRenderer.register();
+        EnergyMeterTileEntityRenderer.register();
     }
 
     @SubscribeEvent

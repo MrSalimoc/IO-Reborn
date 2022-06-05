@@ -5,17 +5,25 @@ import mrsalimoc.ioreborn.common.IOEnergy;
 import mrsalimoc.ioreborn.utils.Registration;
 import net.minecraft.block.BlockState;
 import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.network.NetworkManager;
+import net.minecraft.network.play.server.SUpdateTileEntityPacket;
 import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Direction;
+import net.minecraft.util.IReorderingProcessor;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.energy.CapabilityEnergy;
 import net.minecraftforge.energy.EnergyStorage;
 import net.minecraftforge.energy.IEnergyStorage;
 
+import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.function.Function;
 
 import static dan200.computercraft.shared.Capabilities.CAPABILITY_PERIPHERAL;
 
@@ -29,6 +37,7 @@ public class EnergyMeterTileEntity extends TileEntity implements ITickableTileEn
     }
 
     protected EnergyMeterPeripheral peripheral = new EnergyMeterPeripheral(this);
+    private final IReorderingProcessor[] renderMessages = new IReorderingProcessor[4];
     private LazyOptional<IPeripheral> peripheralCap;
     private LazyOptional<EnergyStorage> energy;
     private int transferRate = 0;
@@ -59,22 +68,41 @@ public class EnergyMeterTileEntity extends TileEntity implements ITickableTileEn
 
     @Override
     public CompoundNBT save(CompoundNBT nbt) {
+        super.save(nbt);
         nbt.putString("peripheralLabel", this.peripheralLabel);
         nbt.putBoolean("allowOutput", this.allowOutput);
         nbt.putInt("energyCount", this.energyCount);
-        return super.save(nbt);
+        return nbt;
     }
 
     @Override
     public void load(BlockState state, CompoundNBT nbt) {
+        super.load(state, nbt);
         this.peripheralLabel = nbt.getString("peripheralLabel");
         this.allowOutput = nbt.getBoolean("allowOutput");
         this.energyCount = nbt.getInt("energyCount");
-        super.load(state, nbt);
     }
 
-    public int getEnergyStored() {
-        return storage.getEnergyStored();
+    @Override
+    public CompoundNBT getUpdateTag() {
+        return this.save(new CompoundNBT());
+    }
+
+    @Nullable
+    @Override
+    public SUpdateTileEntityPacket getUpdatePacket() {
+        return new SUpdateTileEntityPacket(this.worldPosition, -1, this.save(new CompoundNBT()));
+    }
+
+    @Override
+    public void onDataPacket(NetworkManager net, SUpdateTileEntityPacket pkt) {
+        this.setPosition(pkt.getPos());
+        this.load(this.getBlockState(), pkt.getTag());
+    }
+
+    @Nullable
+    public String getRenderMessage() {
+        return this.peripheralLabel;
     }
 
     @Override
@@ -206,6 +234,12 @@ public class EnergyMeterTileEntity extends TileEntity implements ITickableTileEn
     }
 
     public void setPeripheralLabel(String label) {
-        this.peripheralLabel = label;
+        this.level.sendBlockUpdated(this.worldPosition, this.getBlockState(), this.getBlockState(), 2);
+        if(label.length() < 11) {
+            this.peripheralLabel = label;
+        } else {
+            this.peripheralLabel = label.substring(0, 10);
+        }
+
     }
 }
