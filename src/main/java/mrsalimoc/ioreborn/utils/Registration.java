@@ -9,8 +9,10 @@ import mrsalimoc.ioreborn.common.peripherals.energy_meter.EnergyMeterTileEntity;
 import mrsalimoc.ioreborn.common.peripherals.mag_card_reader.MagCardReaderTileEntity;
 import mrsalimoc.ioreborn.common.peripherals.sensor.SensorTileEntity;
 import net.minecraft.block.Block;
+import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.item.Item;
 import net.minecraft.tileentity.TileEntityType;
+import net.minecraftforge.common.extensions.IForgeContainerType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -21,6 +23,7 @@ public class Registration {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, IOReborn.MOD_ID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, IOReborn.MOD_ID);
     public static final DeferredRegister<TileEntityType<?>> TILE_ENTITIES = DeferredRegister.create(ForgeRegistries.TILE_ENTITIES, IOReborn.MOD_ID);
+    public static final DeferredRegister<ContainerType<?>> CONTAINERS = DeferredRegister.create(ForgeRegistries.CONTAINERS, IOReborn.MOD_ID);
 
     public static final RegistryObject<TileEntityType<EnergyMeterTileEntity>> ENERGY_METER_TILEENTITY = Registration.TILE_ENTITIES.register("energy_meter", () -> new TileEntityType<>(EnergyMeterTileEntity::new, Sets.newHashSet(Blocks.ENERGY_METER.get()), null));
     public static final RegistryObject<TileEntityType<SensorTileEntity>> SENSOR_TILEENTITY = Registration.TILE_ENTITIES.register("sensor", () -> new TileEntityType<>(SensorTileEntity::new, Sets.newHashSet(Blocks.SENSOR.get()), null));
@@ -33,6 +36,7 @@ public class Registration {
         BLOCKS.register(modEventBus);
         ITEMS.register(modEventBus);
         TILE_ENTITIES.register(modEventBus);
+        CONTAINERS.register(modEventBus);
         Items.register();
         Blocks.register();
 
