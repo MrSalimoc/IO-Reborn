@@ -21,6 +21,7 @@ You might think where thoses ideas came from ? That's right, saddly we didn't cr
 - [ ] Sensor
     - [x] Block Class
     - [x] TileEntity Class
+    - [x] Block Model
     - [x] Textures (by kwShiro & Lyqyd old antenna texture)
     - #### Features
         - [x] Render rotating antenna (TileEntityRenderer)
@@ -29,6 +30,7 @@ You might think where thoses ideas came from ? That's right, saddly we didn't cr
 - [ ] Cryptographic Accelerator
     - [x] Block Class
     - [x] TileEntity Class
+    - [x] Block Model
     - [x] Textures (by kwShiro & immibis old server case texture)
     - #### Features
         - [ ] Encrypt data
@@ -49,6 +51,7 @@ You might think where thoses ideas came from ? That's right, saddly we didn't cr
 - [ ] RFID Writer
     - [ ] Block Class
     - [ ] TileEntity Class
+    - [ ] Block Model
     - [ ] Textures
     - #### Features
         - [ ] Write data to RFID Card
@@ -62,6 +65,7 @@ You might think where thoses ideas came from ? That's right, saddly we didn't cr
 - [ ] Keypad
     - [ ] Block Class
     - [ ] TileEntity Class
+    - [ ] Block Model
     - [ ] Textures
     - #### Features
         - [ ] Get pressed buttons
@@ -70,6 +74,7 @@ You might think where thoses ideas came from ? That's right, saddly we didn't cr
 - [ ] Electromagnetic Pulse Generator
     - [ ] Block Class
     - [ ] TileEntity Class
+    - [ ] Block Model
     - [ ] Textures
     - #### Features (not definitive)
         - [ ] Shutdown every computer within a range
