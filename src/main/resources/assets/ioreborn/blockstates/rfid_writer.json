@@ -1,0 +1,19 @@
+{
+    "variants": {
+      "facing=north": {
+        "model": "ioreborn:block/rfid_writer"
+      },
+      "facing=south": {
+        "model": "ioreborn:block/rfid_writer",
+        "y": 180
+      },
+      "facing=west": {
+        "model": "ioreborn:block/rfid_writer",
+        "y": 270
+      },
+      "facing=east": {
+        "model": "ioreborn:block/rfid_writer",
+        "y": 90
+      }
+    }
+  }

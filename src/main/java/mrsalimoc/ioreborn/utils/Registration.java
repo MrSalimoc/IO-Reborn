@@ -7,6 +7,7 @@ import mrsalimoc.ioreborn.common.items.Items;
 import mrsalimoc.ioreborn.common.peripherals.cryptographic_accelerator.CryptographicAcceleratorTileEntity;
 import mrsalimoc.ioreborn.common.peripherals.energy_meter.EnergyMeterTileEntity;
 import mrsalimoc.ioreborn.common.peripherals.mag_card_reader.MagCardReaderTileEntity;
+import mrsalimoc.ioreborn.common.peripherals.rfid_writer.RFIDWriterTileEntity;
 import mrsalimoc.ioreborn.common.peripherals.sensor.SensorTileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.inventory.container.ContainerType;
@@ -29,6 +30,7 @@ public class Registration {
     public static final RegistryObject<TileEntityType<SensorTileEntity>> SENSOR_TILEENTITY = Registration.TILE_ENTITIES.register("sensor", () -> new TileEntityType<>(SensorTileEntity::new, Sets.newHashSet(Blocks.SENSOR.get()), null));
     public static final RegistryObject<TileEntityType<CryptographicAcceleratorTileEntity>> CRYPTOGRAPHIC_ACCELERATOR_TILEENTITY = Registration.TILE_ENTITIES.register("cryptographic_accelerator", () -> new TileEntityType<>(CryptographicAcceleratorTileEntity::new, Sets.newHashSet(Blocks.CRYPTOGRAPHIC_ACCELERATOR.get()), null));
     public static final RegistryObject<TileEntityType<MagCardReaderTileEntity>> MAG_CARD_READER_TILEENTITY = Registration.TILE_ENTITIES.register("mag_card_reader", () -> new TileEntityType<>(MagCardReaderTileEntity::new, Sets.newHashSet(Blocks.MAG_CARD_READER.get()), null));
+    public static final RegistryObject<TileEntityType<RFIDWriterTileEntity>> RFID_WRITER_TILEENTITY = Registration.TILE_ENTITIES.register("rfid_writer", () -> new TileEntityType<>(RFIDWriterTileEntity::new, Sets.newHashSet(Blocks.RFID_WRITER.get()), null));
 
 
     public static void register() {

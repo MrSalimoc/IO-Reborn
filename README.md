@@ -51,7 +51,7 @@ You might think where thoses ideas came from ? That's right, saddly we didn't cr
 - [ ] RFID Writer
     - [ ] Block Class
     - [ ] TileEntity Class
-    - [ ] Block Model
+    - [x] Block Model
     - [ ] Textures
     - #### Features
         - [ ] Write data to RFID Card
