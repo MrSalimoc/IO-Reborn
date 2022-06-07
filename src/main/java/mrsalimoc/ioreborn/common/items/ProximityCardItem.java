@@ -29,6 +29,10 @@ public class ProximityCardItem extends Item {
         return TextComponentUtil.build(TextFormatting.AQUA, super.getName(p_200295_1_));
     }
 
+    @Override
+    public Rarity getRarity(ItemStack p_77613_1_) {
+        return Rarity.UNCOMMON;
+    }
 
     @Override
     public void appendHoverText(ItemStack p_77624_1_, @Nullable World p_77624_2_, List<ITextComponent> tooltip, ITooltipFlag p_77624_4_) {
