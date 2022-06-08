@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/orientable",
+    "textures": {
+      "side": "ioreborn:block/side",
+      "front": "ioreborn:block/biometric_scanner_front",
+      "top": "ioreborn:block/bottom"
+    }
+  }

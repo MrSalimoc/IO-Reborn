@@ -1,0 +1,19 @@
+{
+    "variants": {
+      "facing=north": {
+        "model": "ioreborn:block/biometric_scanner"
+      },
+      "facing=south": {
+        "model": "ioreborn:block/biometric_scanner",
+        "y": 180
+      },
+      "facing=west": {
+        "model": "ioreborn:block/biometric_scanner",
+        "y": 270
+      },
+      "facing=east": {
+        "model": "ioreborn:block/biometric_scanner",
+        "y": 90
+      }
+    }
+  }
