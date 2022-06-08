@@ -45,7 +45,7 @@ You might think where thoses ideas came from ? That's right, saddly we didn't cr
 - [ ] RFID Reader
     - [x] Block Class
     - [x] TileEntity Class
-    - [ ] Textures
+    - [x] Textures (by kwShiro)
     - #### Features
         - [ ] Read data from distant RFID Card
 - [ ] RFID Writer
@@ -59,7 +59,7 @@ You might think where thoses ideas came from ? That's right, saddly we didn't cr
 - [ ] Biometric Scanner
     - [x] Block Class
     - [x] TileEntity Class
-    - [ ] Textures
+    - [x] Textures (by kwShiro inspired by old GopherAtl texture)
     - #### Features
         - [ ] Scan player biometric data when right click
 - [ ] Keypad
