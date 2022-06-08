@@ -43,8 +43,8 @@ You might think where thoses ideas came from ? That's right, saddly we didn't cr
         - [ ] Read data from Mag Card
         - [ ] Write data from Mag Card
 - [ ] RFID Reader
-    - [ ] Block Class
-    - [ ] TileEntity Class
+    - [x] Block Class
+    - [x] TileEntity Class
     - [ ] Textures
     - #### Features
         - [ ] Read data from distant RFID Card
@@ -57,8 +57,8 @@ You might think where thoses ideas came from ? That's right, saddly we didn't cr
         - [ ] Write data to RFID Card
         - [ ] Display card on block (TileEntityRenderer)
 - [ ] Biometric Scanner
-    - [ ] Block Class
-    - [ ] TileEntity Class
+    - [x] Block Class
+    - [x] TileEntity Class
     - [ ] Textures
     - #### Features
         - [ ] Scan player biometric data when right click

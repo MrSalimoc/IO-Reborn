@@ -4,6 +4,8 @@
     "block.ioreborn.cryptographic_accelerator": "Cryptographic Accelerator",
     "block.ioreborn.mag_card_reader": "Mag Card Reader",
     "block.ioreborn.rfid_writer": "RFID Writer",
+    "block.ioreborn.rfid_reader": "RFID Reader",
+    "block.ioreborn.biometric_scanner": "Biometric Scanner",
     
     "item.ioreborn.proximity_card": "Proximity Card",
 
@@ -21,6 +23,10 @@
     "tooltip.ioreborn.mag_card_reader.methods": "TODO METHODS LMAO",
     "tooltip.ioreborn.rfid_writer.description": "TODO DESC LMAO",
     "tooltip.ioreborn.rfid_writer.methods": "TODO METHODS LMAO",
+    "tooltip.ioreborn.rfid_reader.description": "TODO DESC LMAO",
+    "tooltip.ioreborn.rfid_reader.methods": "TODO METHODS LMAO",
+    "tooltip.ioreborn.biometric_scanner.description": "TODO DESC LMAO",
+    "tooltip.ioreborn.biometric_scanner.methods": "TODO METHODS LMAO",
 
     "tooltip.ioreborn.proximity_card.description": "Just a random item, no utility for now"
 }

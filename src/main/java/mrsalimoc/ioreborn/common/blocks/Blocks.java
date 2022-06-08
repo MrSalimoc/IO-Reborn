@@ -1,9 +1,11 @@
 package mrsalimoc.ioreborn.common.blocks;
 
 import mrsalimoc.ioreborn.IOReborn;
+import mrsalimoc.ioreborn.common.peripherals.biometric_scanner.BiometricScannerBlock;
 import mrsalimoc.ioreborn.common.peripherals.cryptographic_accelerator.CryptographicAcceleratorBlock;
 import mrsalimoc.ioreborn.common.peripherals.energy_meter.EnergyMeterBlock;
 import mrsalimoc.ioreborn.common.peripherals.mag_card_reader.MagCardReaderBlock;
+import mrsalimoc.ioreborn.common.peripherals.rfid_reader.RFIDReaderBlock;
 import mrsalimoc.ioreborn.common.peripherals.rfid_writer.RFIDWriterBlock;
 import mrsalimoc.ioreborn.common.peripherals.sensor.SensorBlock;
 import mrsalimoc.ioreborn.utils.Registration;
@@ -27,6 +29,8 @@ public class Blocks {
     public static final RegistryObject<Block> CRYPTOGRAPHIC_ACCELERATOR = register("cryptographic_accelerator", () -> new CryptographicAcceleratorBlock(AbstractBlock.Properties.of(Material.STONE).strength(1.0f)));
     public static final RegistryObject<Block> MAG_CARD_READER = register("mag_card_reader", () -> new MagCardReaderBlock(AbstractBlock.Properties.of(Material.STONE).strength(1.0f)));
     public static final RegistryObject<Block> RFID_WRITER = register("rfid_writer", () -> new RFIDWriterBlock(AbstractBlock.Properties.of(Material.STONE).strength(1.0f)));
+    public static final RegistryObject<Block> RFID_READER = register("rfid_reader", () -> new RFIDReaderBlock(AbstractBlock.Properties.of(Material.STONE).strength(1.0f)));
+    public static final RegistryObject<Block> BIOMETRIC_SCANNER = register("biometric_scanner", () -> new BiometricScannerBlock(AbstractBlock.Properties.of(Material.STONE).strength(1.0f)));
 
 
     public static void register() {
