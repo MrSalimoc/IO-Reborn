@@ -1,0 +1,7 @@
+{
+    "variants": {
+      "": {
+        "model": "ioreborn:block/rfid_reader"
+      }
+    }
+  }

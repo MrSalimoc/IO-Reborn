@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/orientable",
+    "textures": {
+      "side": "ioreborn:block/rfid_reader_side",
+      "front": "ioreborn:block/rfid_reader_side",
+      "top": "ioreborn:block/bottom"
+    }
+  }
