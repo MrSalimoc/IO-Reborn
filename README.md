@@ -39,9 +39,9 @@ You might think where thoses ideas came from ? That's right, saddly we didn't cr
     - [x] TileEntity Class
     - [x] Textures (by kwShiro inspired by old immibis texture)
     - #### Features
-        - [ ] Add peripheral status to block state
-        - [ ] Read data from Mag Card
-        - [ ] Write data from Mag Card
+        - [x] Add peripheral status to block state
+        - [x] Read data from Mag Card
+        - [x] Write data from Mag Card
 - [ ] RFID Reader
     - [x] Block Class
     - [x] TileEntity Class
@@ -61,7 +61,7 @@ You might think where thoses ideas came from ? That's right, saddly we didn't cr
     - [x] TileEntity Class
     - [x] Textures (by kwShiro inspired by old GopherAtl texture)
     - #### Features
-        - [ ] Scan player biometric data when right click
+        - [x] Scan player biometric data when right click
 - [ ] Keypad
     - [ ] Block Class
     - [ ] TileEntity Class
