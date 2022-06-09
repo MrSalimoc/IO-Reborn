@@ -48,7 +48,7 @@ public class BiometricScannerBlock extends Block {
         TileEntity te = p_225533_2_.getBlockEntity(p_225533_3_);
         if(te instanceof BiometricScannerTileEntity) {
             if(p_225533_6_.getDirection() == p_225533_1_.getValue(this.FACING)) {
-                ((BiometricScannerTileEntity) te).scan();
+                ((BiometricScannerTileEntity) te).scan(p_225533_4_, p_225533_5_);
             }
 
             return ActionResultType.SUCCESS;

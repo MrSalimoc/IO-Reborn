@@ -5,12 +5,15 @@ import mrsalimoc.ioreborn.IOReborn;
 import mrsalimoc.ioreborn.common.peripherals.mag_card_reader.MagCardReaderBlock;
 import mrsalimoc.ioreborn.common.peripherals.rfid_reader.RFIDReaderPeripheral;
 import mrsalimoc.ioreborn.utils.Registration;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.play.server.SUpdateTileEntityPacket;
 import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Direction;
+import net.minecraft.util.Hand;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
 import org.apache.logging.log4j.Level;
@@ -31,6 +34,8 @@ public class BiometricScannerTileEntity extends TileEntity implements ITickableT
     public static final int STATE_SUCCESS = 2;
     public static final int STATE_ERROR = 3;
     private int scanAnimationCounter = 0;
+    private String dataBuffer = "";
+    public boolean isValidFistPrint = false;
     public boolean scanning = false;
 
     @Override
@@ -64,25 +69,35 @@ public class BiometricScannerTileEntity extends TileEntity implements ITickableT
 
     @Override
     public void tick() {
-        while(scanning && scanAnimationCounter <= 5000) {
+        while(scanning && scanAnimationCounter <= 9000) {
             scanAnimationCounter++;
-            IOReborn.LOGGER.log(Level.DEBUG, "counter on: " + scanAnimationCounter);
-            if(scanAnimationCounter == 5000) {
+            if(scanAnimationCounter == 9000) {
                 getScanResult();
                 scanAnimationCounter = 0;
-                IOReborn.LOGGER.log(Level.DEBUG, "counter off: 0" + scanAnimationCounter);
             }
         }
     }
 
-    public void scan() {
+    public void scan(PlayerEntity p_225533_4_, Hand p_225533_5_) {
         this.scanning = true;
         this.level.setBlockAndUpdate(worldPosition, this.getBlockState().setValue(BiometricScannerBlock.STATE, STATE_SCANNING));
+        if(p_225533_4_.getItemInHand(p_225533_5_) != ItemStack.EMPTY) {
+            isValidFistPrint = false;
+        } else {
+            dataBuffer = p_225533_4_.getDisplayName().getString();
+            isValidFistPrint = true;
+        }
     }
 
     public void getScanResult() {
         this.scanning = false;
-        this.level.setBlockAndUpdate(worldPosition, this.getBlockState().setValue(BiometricScannerBlock.STATE, STATE_SUCCESS));
+        if(isValidFistPrint) {
+            this.level.setBlockAndUpdate(worldPosition, this.getBlockState().setValue(BiometricScannerBlock.STATE, STATE_SUCCESS));
+            this.peripheral.connectedComputers.forEach((c) -> c.queueEvent("biometric_scan_result", this.dataBuffer));
+        } else {
+            this.level.setBlockAndUpdate(worldPosition, this.getBlockState().setValue(BiometricScannerBlock.STATE, STATE_ERROR));
+        }
+
     }
 }
 
