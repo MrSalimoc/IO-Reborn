@@ -80,22 +80,19 @@ You might think where thoses ideas came from ? That's right, saddly we didn't cr
         - [ ] Shutdown every computer within a range
         - [ ] Prevent wireless modem communication within a range or channel id
 ### Items
-- [ ] Mag Card
-    - [ ] Item Class
-    - [ ] TileEntity Class
+- [x] Mag Card
+    - [x] Item Class
     - [ ] Texture
     - #### Features
-        - [ ] Store data
+        - [x] Store data
 - [ ] RFID Card
     - [ ] Item Class
-    - [ ] TileEntity Class
     - [ ] Texture
     - #### Features
         - [ ] Store data
         - [ ] Can get scanned in RFID Reader range
 - [ ] Silicon Ball
-    - [ ] Item Class
-    - [ ] TileEntity Class
+    - [x] Item Class
     - [ ] Texture
     - #### Features
         - [ ] Can get player fistprint if right click
