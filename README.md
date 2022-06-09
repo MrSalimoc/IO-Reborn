@@ -93,3 +93,10 @@ You might think where thoses ideas came from ? That's right, saddly we didn't cr
     - #### Features
         - [ ] Store data
         - [ ] Can get scanned in RFID Reader range
+- [ ] Silicon Ball
+    - [ ] Item Class
+    - [ ] TileEntity Class
+    - [ ] Texture
+    - #### Features
+        - [ ] Can get player fistprint if right click
+
