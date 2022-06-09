@@ -1,19 +1,23 @@
-{
+  {
     "variants": {
-      "facing=north": {
-        "model": "ioreborn:block/biometric_scanner"
-      },
-      "facing=south": {
-        "model": "ioreborn:block/biometric_scanner",
-        "y": 180
-      },
-      "facing=west": {
-        "model": "ioreborn:block/biometric_scanner",
-        "y": 270
-      },
-      "facing=east": {
-        "model": "ioreborn:block/biometric_scanner",
-        "y": 90
-      }
+        "facing=north,scanner_state=0":  { "model": "ioreborn:block/biometric_scanner" },
+        "facing=east,scanner_state=0":   { "model": "ioreborn:block/biometric_scanner", "y": 90 },
+        "facing=south,scanner_state=0":   { "model": "ioreborn:block/biometric_scanner", "y": 180 },
+        "facing=west,scanner_state=0":   { "model": "ioreborn:block/biometric_scanner", "y": 270 },
+        
+        "facing=north,scanner_state=1":  { "model": "ioreborn:block/biometric_scanner_scanning" },
+        "facing=east,scanner_state=1":   { "model": "ioreborn:block/biometric_scanner_scanning", "y": 90 },
+        "facing=south,scanner_state=1":   { "model": "ioreborn:block/biometric_scanner_scanning", "y": 180 },
+        "facing=west,scanner_state=1":   { "model": "ioreborn:block/biometric_scanner_scanning", "y": 270 },
+
+        "facing=north,scanner_state=2":  { "model": "ioreborn:block/biometric_scanner_success" },
+        "facing=east,scanner_state=2":   { "model": "ioreborn:block/biometric_scanner_success", "y": 90 },
+        "facing=south,scanner_state=2":   { "model": "ioreborn:block/biometric_scanner_success", "y": 180 },
+        "facing=west,scanner_state=2":   { "model": "ioreborn:block/biometric_scanner_success", "y": 270 },
+
+        "facing=north,scanner_state=3":  { "model": "ioreborn:block/biometric_scanner_error" },
+        "facing=east,scanner_state=3":   { "model": "ioreborn:block/biometric_scanner_error", "y": 90 },
+        "facing=south,scanner_state=3":   { "model": "ioreborn:block/biometric_scanner_error", "y": 180 },
+        "facing=west,scanner_state=3":   { "model": "ioreborn:block/biometric_scanner_error", "y": 270 }
     }
-  }
+}
