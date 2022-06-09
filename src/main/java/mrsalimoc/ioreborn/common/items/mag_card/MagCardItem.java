@@ -27,6 +27,7 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import org.apache.logging.log4j.Level;
+import org.w3c.dom.Text;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -124,7 +125,7 @@ public class MagCardItem extends Item {
         if(p_77624_1_.hasTag()) {
             CompoundNBT nbtTagCompound = p_77624_1_.getTag();
             if(nbtTagCompound != null || nbtTagCompound.contains("data")) {
-                tooltip.add(1, ITextComponent.nullToEmpty(nbtTagCompound.getString("data")));
+                tooltip.add(1, ITextComponent.nullToEmpty(TextFormatting.GRAY + nbtTagCompound.getString("data")));
             }
         }
 
