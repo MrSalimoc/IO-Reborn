@@ -15,6 +15,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Hand;
 import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.util.Constants;
 import net.minecraftforge.common.util.LazyOptional;
 import org.apache.logging.log4j.Level;
 
@@ -37,6 +38,9 @@ public class BiometricScannerTileEntity extends TileEntity implements ITickableT
     private String dataBuffer = "";
     public boolean isValidFistPrint = false;
     public boolean scanning = false;
+
+    public int scanCurrentTime;
+    public final int maxScanTime = 10;
 
     @Override
     public <T> LazyOptional<T> getCapability(Capability<T> cap, Direction direction) {
@@ -69,18 +73,50 @@ public class BiometricScannerTileEntity extends TileEntity implements ITickableT
 
     @Override
     public void tick() {
-        while(scanning && scanAnimationCounter <= 9000) {
-            scanAnimationCounter++;
-            if(scanAnimationCounter == 9000) {
-                getScanResult();
-                scanAnimationCounter = 0;
+        boolean dirty = false;
+        if(!this.level.isClientSide) {
+            if(scanning) {
+                if(this.scanCurrentTime < this.maxScanTime) {
+                    this.level.setBlockAndUpdate(worldPosition, this.getBlockState().setValue(BiometricScannerBlock.STATE, STATE_SCANNING));
+                    this.scanCurrentTime++;
+                    dirty = true;
+                } else {
+                    if(this.scanCurrentTime < 20) {
+                        this.scanCurrentTime++;
+                        if (isValidFistPrint) {
+                            this.level.setBlockAndUpdate(worldPosition, this.getBlockState().setValue(BiometricScannerBlock.STATE, STATE_SUCCESS));
+                        } else {
+                            this.level.setBlockAndUpdate(worldPosition, this.getBlockState().setValue(BiometricScannerBlock.STATE, STATE_ERROR));
+                        }
+                        if(this.scanCurrentTime == 20 && isValidFistPrint) {
+                            this.peripheral.connectedComputers.forEach((c) -> c.queueEvent("biometric_result", dataBuffer));
+                        }
+                    } else {
+                        this.level.setBlockAndUpdate(worldPosition, this.getBlockState().setValue(BiometricScannerBlock.STATE, STATE_OFF));
+                        this.scanning = false;
+                        this.scanCurrentTime = 0;
+                    }
+                    dirty = true;
+                }
             }
         }
+
+        if(dirty) {
+            this.level.sendBlockUpdated(worldPosition, this.getBlockState(), this.getBlockState(), Constants.BlockFlags.BLOCK_UPDATE);
+        }
+
+        //while(scanning && scanAnimationCounter <= 9000) {
+        //    scanAnimationCounter++;
+        //    if(scanAnimationCounter == 9000) {
+        //        getScanResult();
+        //        scanAnimationCounter = 0;
+        //    }
+        //}
+
     }
 
     public void scan(PlayerEntity p_225533_4_, Hand p_225533_5_) {
         this.scanning = true;
-        this.level.setBlockAndUpdate(worldPosition, this.getBlockState().setValue(BiometricScannerBlock.STATE, STATE_SCANNING));
         if(p_225533_4_.getItemInHand(p_225533_5_) != ItemStack.EMPTY) {
             isValidFistPrint = false;
         } else {
@@ -90,14 +126,14 @@ public class BiometricScannerTileEntity extends TileEntity implements ITickableT
     }
 
     public void getScanResult() {
-        this.scanning = false;
-        if(isValidFistPrint) {
-            this.level.setBlockAndUpdate(worldPosition, this.getBlockState().setValue(BiometricScannerBlock.STATE, STATE_SUCCESS));
-            this.peripheral.connectedComputers.forEach((c) -> c.queueEvent("biometric_scan_result", this.dataBuffer));
-            this.dataBuffer = "";
-        } else {
-            this.level.setBlockAndUpdate(worldPosition, this.getBlockState().setValue(BiometricScannerBlock.STATE, STATE_ERROR));
-        }
+        //this.scanning = false;
+        //if(isValidFistPrint) {
+        //    this.level.setBlockAndUpdate(worldPosition, this.getBlockState().setValue(BiometricScannerBlock.STATE, STATE_SUCCESS));
+        //
+        //    this.dataBuffer = "";
+        //} else {
+        //    this.level.setBlockAndUpdate(worldPosition, this.getBlockState().setValue(BiometricScannerBlock.STATE, STATE_ERROR));
+        //}
 
     }
 }
