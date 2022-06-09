@@ -88,7 +88,7 @@ public class BiometricScannerTileEntity extends TileEntity implements ITickableT
                         } else {
                             this.level.setBlockAndUpdate(worldPosition, this.getBlockState().setValue(BiometricScannerBlock.STATE, STATE_ERROR));
                         }
-                        if(this.scanCurrentTime == 20 && isValidFistPrint) {
+                        if(this.scanCurrentTime == this.maxScanTime && isValidFistPrint) {
                             this.peripheral.connectedComputers.forEach((c) -> c.queueEvent("biometric_result", dataBuffer));
                         }
                     } else {
