@@ -27,11 +27,17 @@ public class MagCardReaderPeripheral implements IPeripheral {
 
     @Override
     public void attach(@Nonnull IComputerAccess computer) {
+        if(connectedComputers.size() < 1) {
+            getTileEntity().setBlockState(MagCardReaderTileEntity.STATE_IDLE);
+        }
         connectedComputers.add(computer);
     }
 
     @Override
     public void detach(@Nonnull IComputerAccess computer) {
+        if(connectedComputers.size() == 0) {
+            getTileEntity().setBlockState(MagCardReaderTileEntity.STATE_OFF);
+        }
         connectedComputers.remove(computer);
     }
 
@@ -44,8 +50,51 @@ public class MagCardReaderPeripheral implements IPeripheral {
         return tileEntity;
     }
 
+
     @LuaFunction
-    public final void setBlockState(int state) {
-        getTileEntity().setBlockState(state);
+    public final void beginWrite(String data) {
+        getTileEntity().setBlockState(MagCardReaderTileEntity.STATE_WRITE_WAIT);
+        getTileEntity().dataToWrite = data;
+    }
+
+    @LuaFunction
+    public final void setInsertCardLight(boolean bool) {
+        switch(getTileEntity().state) {
+            case MagCardReaderTileEntity.STATE_IDLE:
+                if(bool) {
+                    getTileEntity().setBlockState(MagCardReaderTileEntity.STATE_READ_WAIT);
+                }
+                break;
+            case MagCardReaderTileEntity.STATE_READ_WAIT:
+                if(!bool) {
+                    getTileEntity().setBlockState(MagCardReaderTileEntity.STATE_IDLE);
+                }
+                break;
+            case MagCardReaderTileEntity.STATE_WRITE:
+                if(bool) {
+                    getTileEntity().setBlockState(MagCardReaderTileEntity.STATE_WRITE_WAIT);
+                }
+                break;
+            case MagCardReaderTileEntity.STATE_WRITE_WAIT:
+                if(!bool) {
+                    getTileEntity().setBlockState(MagCardReaderTileEntity.STATE_WRITE);
+                }
+                break;
+        }
+    }
+
+    @LuaFunction
+    public final void cancelWrite() {
+        getTileEntity().setBlockState(MagCardReaderTileEntity.STATE_IDLE);
+        getTileEntity().dataToWrite = "none";
+    }
+
+    @LuaFunction
+    public final boolean isWaiting() {
+        if(getTileEntity().state == MagCardReaderTileEntity.STATE_WRITE_WAIT || getTileEntity().state == MagCardReaderTileEntity.STATE_READ_WAIT) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

@@ -28,6 +28,7 @@ public class MagCardReaderTileEntity extends TileEntity implements ITickableTile
     public static final int STATE_WRITE_WAIT = 3; // computer connected, writing, insert card now
     public static final int STATE_WRITE = 4; // computer connected, writing
     public int state = STATE_OFF;
+    public String dataToWrite = "none";
 
     public MagCardReaderTileEntity() {
         super(Registration.MAG_CARD_READER_TILEENTITY.get());
@@ -59,5 +60,14 @@ public class MagCardReaderTileEntity extends TileEntity implements ITickableTile
     public void setBlockState(int state) {
         this.level.setBlockAndUpdate(worldPosition, this.getBlockState().setValue(MagCardReaderBlock.STATE, state));
         this.state = state;
+    }
+
+    public void readCard(String data) {
+        peripheral.connectedComputers.forEach((c) -> c.queueEvent("mag_card_lecture", data));
+    }
+
+    public String writeCard(String oldData) {
+        peripheral.connectedComputers.forEach((c) -> c.queueEvent("mag_card_write_done", dataToWrite, oldData));
+        return dataToWrite;
     }
 }
