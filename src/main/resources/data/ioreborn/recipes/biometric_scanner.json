@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "IRI",
+      "ITI",
+      "IPI"
+    ],
+    "key": {
+      "T": {
+        "item": "minecraft:redstone_torch"
+      },
+      "R": {
+        "item": "minecraft:repeater"
+      },
+      "P": {
+        "item": "minecraft:glass_pane"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      }
+    },
+    "result": {
+      "item": "ioreborn:biometric_scanner"
+    }
+  }

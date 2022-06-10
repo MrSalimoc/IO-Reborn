@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "PPP",
+      "IRI"
+    ],
+    "key": {
+      "P": {
+        "item": "minecraft:paper"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "R": {
+        "item": "minecraft:redstone"
+      }
+    },
+    "result": {
+      "item": "ioreborn:mag_card"
+    }
+  }

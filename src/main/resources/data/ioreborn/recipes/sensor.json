@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "OOO",
+      "ROR",
+      "SSS"
+    ],
+    "key": {
+      "S": {
+        "item": "minecraft:stone"
+      },
+      "O": {
+        "item": "minecraft:obsidian"
+      },
+      "R": {
+        "item": "minecraft:redstone"
+      }
+    },
+    "result": {
+      "item": "ioreborn:sensor"
+    }
+  }

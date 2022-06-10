@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "ITI",
+      "IRI",
+      "OOO"
+    ],
+    "key": {
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "O": {
+        "item": "minecraft:obsidian"
+      },
+      "R": {
+        "item": "minecraft:redstone"
+      }
+      ,
+      "T": {
+        "item": "minecraft:redstone_torch"
+      }
+    },
+    "result": {
+      "item": "ioreborn:energy_meter"
+    }
+  }

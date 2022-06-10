@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "STS",
+      "SRS",
+      "SSS"
+    ],
+    "key": {
+      "S": {
+        "item": "minecraft:stone"
+      },
+      "T": {
+        "item": "minecraft:redstone_torch"
+      },
+      "R": {
+        "item": "minecraft:redstone"
+      }
+    },
+    "result": {
+      "item": "ioreborn:mag_card_reader"
+    }
+  }

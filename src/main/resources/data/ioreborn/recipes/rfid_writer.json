@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "LPL",
+      "G G",
+      "SRS"
+    ],
+    "key": {
+      "S": {
+        "item": "minecraft:stone"
+      },
+      "L": {
+        "item": "minecraft:redstone_lamp"
+      },
+      "R": {
+        "item": "minecraft:repeater"
+      },
+      "P": {
+        "item": "minecraft:glass_pane"
+      },
+      "G": {
+        "item": "minecraft:gold_block"
+      }
+    },
+    "result": {
+      "item": "ioreborn:rfid_writer"
+    }
+  }
