@@ -13,22 +13,23 @@
 
     "itemGroup.ioreborn": "IO Reborn",
 
-    "tooltip.ioreborn.hint": "Hold \u00A7b[CTRL + SHIFT]\u00A7r for informations.",
+    "tooltip.ioreborn.hint": "Hold \u00A7cCTRL + SHIFT\u00A7r for informations.",
     "tooltip.ioreborn.methods": "Hold \u00A7a[ALT]\u00A7r to see LUA functions.",
-    "tooltip.ioreborn.energy_meter.description": "TODO DESC LMAO",
+    "tooltip.ioreborn.energy_meter.description": "A peripheral used to measure energy, take control of it (blocking it from passing) and indicate things.",
     "tooltip.ioreborn.energy_meter.methods": "TODO METHODS LMAO",
-    "tooltip.ioreborn.sensor.description": "TODO DESC LMAO",
+    "tooltip.ioreborn.sensor.description": "A sensor used to get nearby entities data, such as distance or name.",
     "tooltip.ioreborn.sensor.methods": "TODO METHODS LMAO",
-    "tooltip.ioreborn.cryptographic_accelerator.description": "TODO DESC LMAO",
+    "tooltip.ioreborn.cryptographic_accelerator.description": "A peripheral used to generate cryptic things.. TODO",
     "tooltip.ioreborn.cryptographic_accelerator.methods": "TODO METHODS LMAO",
-    "tooltip.ioreborn.mag_card_reader.description": "TODO DESC LMAO",
+    "tooltip.ioreborn.mag_card_reader.description": "A device used to write or read \u00A7eMag Cards\u00A77 data and transmit it to computers with event.",
     "tooltip.ioreborn.mag_card_reader.methods": "TODO METHODS LMAO",
-    "tooltip.ioreborn.rfid_writer.description": "TODO DESC LMAO",
+    "tooltip.ioreborn.rfid_writer.description": "A device used to write on \u00A7eRFID Cards\u00A77",
     "tooltip.ioreborn.rfid_writer.methods": "TODO METHODS LMAO",
-    "tooltip.ioreborn.rfid_reader.description": "TODO DESC LMAO",
+    "tooltip.ioreborn.rfid_reader.description": "A device used to read \u00A7eRFID Cards\u00A77 data and transmit it to computers with event.",
     "tooltip.ioreborn.rfid_reader.methods": "TODO METHODS LMAO",
-    "tooltip.ioreborn.biometric_scanner.description": "TODO DESC LMAO",
+    "tooltip.ioreborn.biometric_scanner.description": "A peripheral used to scan player fistprint and transmit it to computers with event.",
     "tooltip.ioreborn.biometric_scanner.methods": "TODO METHODS LMAO",
 
-    "tooltip.ioreborn.proximity_card.description": "Just a random item, no utility for now"
+    "tooltip.ioreborn.proximity_card.description": "Just a random item, no utility for now.. TODO",
+    "tooltip.ioreborn.silicon_ball.description": "Just a random item, no utility for now.. TODO"
 }

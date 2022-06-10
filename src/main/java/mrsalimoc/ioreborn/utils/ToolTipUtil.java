@@ -21,11 +21,11 @@ public class ToolTipUtil {
     public static List<ITextComponent> getBlockTooltip(String blockName, List<ITextComponent> tooltip) {
         if(Screen.hasControlDown() && Screen.hasShiftDown()) {
             tooltip.add(1, TextComponentUtil.build(TextFormatting.GRAY, new TranslationTextComponent("tooltip.ioreborn." + blockName + ".description")));
-        } else if(Screen.hasAltDown()) {
-            tooltip.add(1, TextComponentUtil.build(TextFormatting.GRAY, new TranslationTextComponent("tooltip.ioreborn." + blockName + ".methods")));
+        //} else if(Screen.hasAltDown()) {
+        //    tooltip.add(1, TextComponentUtil.build(TextFormatting.GRAY, new TranslationTextComponent("tooltip.ioreborn." + blockName + ".methods")));
         } else {
             tooltip.add(1, TextComponentUtil.build(new TranslationTextComponent("tooltip.ioreborn.hint")));
-            tooltip.add(2, TextComponentUtil.build(new TranslationTextComponent("tooltip.ioreborn.methods")));
+            //tooltip.add(2, TextComponentUtil.build(new TranslationTextComponent("tooltip.ioreborn.methods")));
         }
         return tooltip;
     }
