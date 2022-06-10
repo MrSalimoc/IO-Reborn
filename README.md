@@ -82,7 +82,7 @@ You might think where thoses ideas came from ? That's right, saddly we didn't cr
 ### Items
 - [x] Mag Card
     - [x] Item Class
-    - [ ] Texture
+    - [x] Texture
     - #### Features
         - [x] Store data
 - [ ] RFID Card
@@ -93,7 +93,7 @@ You might think where thoses ideas came from ? That's right, saddly we didn't cr
         - [ ] Can get scanned in RFID Reader range
 - [ ] Silicon Ball
     - [x] Item Class
-    - [ ] Texture
+    - [x] Texture
     - #### Features
         - [ ] Can get player fistprint if right click
 
