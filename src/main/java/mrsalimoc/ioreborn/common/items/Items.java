@@ -10,7 +10,6 @@ import net.minecraftforge.fml.RegistryObject;
 
 public class Items {
 
-    public static final RegistryObject<Item> PROXIMITY_CARD = Registration.ITEMS.register("proximity_card", () -> new ProximityCardItem(new Item.Properties().tab(IOReborn.IO_TAB)));
     public static final RegistryObject<Item> SILICON_BALL = Registration.ITEMS.register("silicon_ball", () -> new SiliconBallItem(new Item.Properties().tab(IOReborn.IO_TAB)));
     public static final RegistryObject<Item> MAG_CARD = Registration.ITEMS.register("mag_card", () -> new MagCardItem(new Item.Properties().tab(IOReborn.IO_TAB)));
     public static final RegistryObject<Item> RFID_CARD = Registration.ITEMS.register("rfid_card", () -> new RFIDCardItem(new Item.Properties().tab(IOReborn.IO_TAB)));

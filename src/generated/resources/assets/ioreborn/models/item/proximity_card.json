@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "ioreborn:item/proximity_card",
-    "layer1": "ioreborn:item/tier3"
-  }
-}
