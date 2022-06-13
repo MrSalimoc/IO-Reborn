@@ -1,6 +1,10 @@
 {
-    "parent": "minecraft:item/generated",
-    "textures": {
-      "layer0": "ioreborn:item/silicon_ball"
-    }
-  }
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "ioreborn:item/silicon_ball"
+  },
+  "overrides": [
+      { "predicate": { "ioreborn:used": 0 }, "model": "ioreborn:item/silicon_ball" },
+      { "predicate": { "ioreborn:used": 1 }, "model": "ioreborn:item/used_silicon_ball" }
+  ]
+}

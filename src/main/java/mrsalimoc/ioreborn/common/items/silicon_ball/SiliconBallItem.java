@@ -53,6 +53,11 @@ public class SiliconBallItem extends Item {
     }
 
     @Override
+    public int getItemStackLimit(ItemStack stack) {
+        return 1;
+    }
+
+    @Override
     public Rarity getRarity(ItemStack p_77613_1_) {
         return Rarity.UNCOMMON;
     }

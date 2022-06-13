@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "ioreborn:silicon_ball"
+        }
+    ],
+    "result": {
+        "item": "ioreborn:silicon_ball"
+    }
+}
