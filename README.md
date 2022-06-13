@@ -86,14 +86,14 @@ You might think where thoses ideas came from ? That's right, saddly we didn't cr
     - #### Features
         - [x] Store data
 - [ ] RFID Card
-    - [ ] Item Class
-    - [ ] Texture
-    - #### Features
-        - [ ] Store data
-        - [ ] Can get scanned in RFID Reader range
-- [ ] Silicon Ball
     - [x] Item Class
     - [x] Texture
     - #### Features
-        - [ ] Can get player fistprint if right click
+        - [ ] Store data
+        - [ ] Can get scanned in RFID Reader range
+- [x] Silicon Ball
+    - [x] Item Class
+    - [x] Texture
+    - #### Features
+        - [x] Can get player fistprint if sneak + right click
 
