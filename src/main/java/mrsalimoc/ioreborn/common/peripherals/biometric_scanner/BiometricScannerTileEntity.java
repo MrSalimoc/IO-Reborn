@@ -2,6 +2,8 @@ package mrsalimoc.ioreborn.common.peripherals.biometric_scanner;
 
 import dan200.computercraft.api.peripheral.IPeripheral;
 import mrsalimoc.ioreborn.IOReborn;
+import mrsalimoc.ioreborn.common.items.Items;
+import mrsalimoc.ioreborn.common.items.silicon_ball.SiliconBallItem;
 import mrsalimoc.ioreborn.common.peripherals.mag_card_reader.MagCardReaderBlock;
 import mrsalimoc.ioreborn.common.peripherals.rfid_reader.RFIDReaderPeripheral;
 import mrsalimoc.ioreborn.utils.Registration;
@@ -117,8 +119,21 @@ public class BiometricScannerTileEntity extends TileEntity implements ITickableT
 
     public void scan(PlayerEntity p_225533_4_, Hand p_225533_5_) {
         this.scanning = true;
-        if(p_225533_4_.getItemInHand(p_225533_5_) != ItemStack.EMPTY) {
-            isValidFistPrint = false;
+        if (p_225533_4_.getItemInHand(p_225533_5_) != ItemStack.EMPTY) {
+            if (p_225533_4_.getItemInHand(p_225533_5_).getItem() instanceof SiliconBallItem) {
+                if (p_225533_4_.getItemInHand(p_225533_5_).hasTag()) {
+                    if(p_225533_4_.getItemInHand(p_225533_5_).getTag().contains("fistprint")) {
+                        dataBuffer = p_225533_4_.getItemInHand(p_225533_5_).getTag().getString("fistprint");
+                        isValidFistPrint = true;
+                    } else {
+                        isValidFistPrint = false;
+                    }
+                } else {
+                    isValidFistPrint = false;
+                }
+            } else {
+                isValidFistPrint = false;
+            }
         } else {
             dataBuffer = p_225533_4_.getDisplayName().getString();
             isValidFistPrint = true;
