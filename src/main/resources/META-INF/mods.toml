@@ -19,7 +19,7 @@ modId="ioreborn" #mandatory
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
 # ${file.jarVersion} will substitute the value of the Implementation-Version as read from the mod's JAR file metadata
 # see the associated build.gradle script for how to populate this completely automatically during a build
-version="0.2.1-alpha" #mandatory #${file.jarVersion}
+version="0.2.2-alpha" #mandatory #${file.jarVersion}
  # A display name for the mod
 displayName="IO Reborn" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
@@ -34,8 +34,7 @@ credits="Thanks to kwShiro for the textures and thanks to richie3366 for letting
 authors="MrSalimoc" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-IO Reborn is a new reimplementation of IO-Peripheral (by richie3366), OpenCCSensors (by Cloudhunter) mods and others with some enhancement for CC:Tweaked mod and new Minecraft updates.
-'''
+IO Reborn is the best mod that you can think of when you need not only pretty but useful peripherals !'''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.ioreborn]] #optional
     # the modid of the dependency
