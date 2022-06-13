@@ -128,12 +128,5 @@ public class MagCardItem extends Item {
                 tooltip.add(1, ITextComponent.nullToEmpty(TextFormatting.GRAY + nbtTagCompound.getString("data")));
             }
         }
-
-        //ToolTipUtil.getItemTooltip("silicon_ball", tooltip);
-    }
-
-    @Override
-    public int getRGBDurabilityForDisplay(ItemStack stack) {
-        return super.getRGBDurabilityForDisplay(stack);
     }
 }
