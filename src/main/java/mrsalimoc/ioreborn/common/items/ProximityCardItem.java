@@ -24,10 +24,6 @@ public class ProximityCardItem extends Item {
         super(properties);
     }
 
-    @Override
-    public ITextComponent getName(ItemStack p_200295_1_) {
-        return TextComponentUtil.build(TextFormatting.AQUA, super.getName(p_200295_1_));
-    }
 
     @Override
     public Rarity getRarity(ItemStack p_77613_1_) {
