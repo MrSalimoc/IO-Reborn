@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:block",
+    "name": "ioreborn:mag_card_reader",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "ioreborn:mag_card_reader"
+                }
+            ]
+        }
+    ]
+}

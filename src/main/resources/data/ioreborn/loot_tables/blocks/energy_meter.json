@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:block",
+    "name": "ioreborn:energy_meter",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "ioreborn:energy_meter"
+                }
+            ]
+        }
+    ]
+}

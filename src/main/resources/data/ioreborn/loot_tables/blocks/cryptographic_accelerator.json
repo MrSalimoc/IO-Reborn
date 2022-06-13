@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:block",
+    "name": "ioreborn:cryptographic_accelerator",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "ioreborn:cryptographic_accelerator"
+                }
+            ]
+        }
+    ]
+}

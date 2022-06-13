@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:block",
+    "name": "ioreborn:biometric_scanner",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "ioreborn:biometric_scanner"
+                }
+            ]
+        }
+    ]
+}
