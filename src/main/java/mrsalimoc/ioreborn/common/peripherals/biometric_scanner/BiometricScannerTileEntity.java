@@ -31,7 +31,7 @@ public class BiometricScannerTileEntity extends TileEntity implements ITickableT
     public static final int STATE_SCANNING = 1;
     public static final int STATE_SUCCESS = 2;
     public static final int STATE_ERROR = 3;
-    private int scanAnimationCounter = 0;
+    //private int scanAnimationCounter = 0;
     private String dataBuffer = "";
     public boolean isValidFistPrint = false;
     public boolean scanning = false;
