@@ -9,15 +9,12 @@ import mrsalimoc.ioreborn.common.peripherals.rfid_reader.RFIDReaderBlock;
 import mrsalimoc.ioreborn.common.peripherals.rfid_writer.RFIDWriterBlock;
 import mrsalimoc.ioreborn.common.peripherals.sensor.SensorBlock;
 import mrsalimoc.ioreborn.utils.Registration;
-import mrsalimoc.ioreborn.utils.TextComponentUtil;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
-import net.minecraft.item.BlockNamedItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Rarity;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.fml.RegistryObject;
 
 import java.util.function.Supplier;

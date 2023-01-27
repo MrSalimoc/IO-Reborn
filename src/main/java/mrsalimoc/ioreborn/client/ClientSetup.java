@@ -6,22 +6,16 @@ import mrsalimoc.ioreborn.common.items.Items;
 import mrsalimoc.ioreborn.common.items.silicon_ball.SiliconBallItem;
 import mrsalimoc.ioreborn.common.peripherals.energy_meter.EnergyMeterTileEntityRenderer;
 import mrsalimoc.ioreborn.common.peripherals.sensor.SensorTileEntityRenderer;
-import mrsalimoc.ioreborn.utils.Registration;
-import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
-import net.minecraft.client.renderer.entity.EntityRendererManager;
-import net.minecraft.client.renderer.entity.PlayerRenderer;
 import net.minecraft.client.renderer.texture.AtlasTexture;
 import net.minecraft.item.ItemModelsProperties;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.ForgeRenderTypes;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import org.apache.logging.log4j.Level;
 
 import static mrsalimoc.ioreborn.common.peripherals.sensor.SensorTileEntityRenderer.ANTENNA_TEXTURE;
 

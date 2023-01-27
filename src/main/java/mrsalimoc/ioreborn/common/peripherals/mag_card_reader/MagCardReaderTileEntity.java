@@ -1,18 +1,12 @@
 package mrsalimoc.ioreborn.common.peripherals.mag_card_reader;
 
 import dan200.computercraft.api.peripheral.IPeripheral;
-import mrsalimoc.ioreborn.common.peripherals.energy_meter.EnergyMeterPeripheral;
 import mrsalimoc.ioreborn.utils.Registration;
 import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.Direction;
-import net.minecraft.util.text.ITextComponent;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.energy.CapabilityEnergy;
-
-import javax.annotation.Nullable;
 
 import static dan200.computercraft.shared.Capabilities.CAPABILITY_PERIPHERAL;
 

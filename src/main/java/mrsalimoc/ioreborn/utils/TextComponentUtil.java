@@ -1,8 +1,6 @@
 package mrsalimoc.ioreborn.utils;
 
-import mrsalimoc.ioreborn.IOReborn;
 import net.minecraft.block.Block;
-import net.minecraft.fluid.Fluid;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Direction;
@@ -10,7 +8,6 @@ import net.minecraft.util.text.*;
 import net.minecraft.util.text.event.ClickEvent;
 import net.minecraft.util.text.event.HoverEvent;
 import net.minecraftforge.fluids.FluidStack;
-import org.apache.logging.log4j.Level;
 
 public class TextComponentUtil {
 

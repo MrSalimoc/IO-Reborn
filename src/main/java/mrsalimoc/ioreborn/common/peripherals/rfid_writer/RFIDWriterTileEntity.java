@@ -1,7 +1,6 @@
 package mrsalimoc.ioreborn.common.peripherals.rfid_writer;
 
 import dan200.computercraft.api.peripheral.IPeripheral;
-import mrsalimoc.ioreborn.common.peripherals.cryptographic_accelerator.CryptographicAcceleratorPeripheral;
 import mrsalimoc.ioreborn.utils.Registration;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Direction;

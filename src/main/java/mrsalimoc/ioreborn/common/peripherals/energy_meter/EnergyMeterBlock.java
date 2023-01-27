@@ -2,11 +2,9 @@ package mrsalimoc.ioreborn.common.peripherals.energy_meter;
 
 
 import mrsalimoc.ioreborn.utils.Registration;
-import mrsalimoc.ioreborn.utils.TextComponentUtil;
 import mrsalimoc.ioreborn.utils.ToolTipUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.ItemStack;
@@ -16,8 +14,6 @@ import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Direction;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.IBlockReader;
 
 import javax.annotation.Nullable;

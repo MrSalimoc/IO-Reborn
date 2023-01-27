@@ -1,38 +1,26 @@
 package mrsalimoc.ioreborn.common.peripherals.mag_card_reader;
 
 import mrsalimoc.ioreborn.IOReborn;
-import mrsalimoc.ioreborn.common.blocks.Blocks;
 import mrsalimoc.ioreborn.utils.Registration;
-import mrsalimoc.ioreborn.utils.TextComponentUtil;
 import mrsalimoc.ioreborn.utils.ToolTipUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.tileentity.BeaconTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Direction;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.*;
-import net.minecraft.util.text.Color;
 import net.minecraft.world.IBlockReader;
-import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import org.apache.logging.log4j.Level;
 
 import javax.annotation.Nullable;
-import java.awt.*;
 import java.util.List;
 
 public class MagCardReaderBlock extends Block {

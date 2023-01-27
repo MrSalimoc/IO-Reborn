@@ -1,11 +1,7 @@
 package mrsalimoc.ioreborn.common.peripherals.biometric_scanner;
 
 import dan200.computercraft.api.peripheral.IPeripheral;
-import mrsalimoc.ioreborn.IOReborn;
-import mrsalimoc.ioreborn.common.items.Items;
 import mrsalimoc.ioreborn.common.items.silicon_ball.SiliconBallItem;
-import mrsalimoc.ioreborn.common.peripherals.mag_card_reader.MagCardReaderBlock;
-import mrsalimoc.ioreborn.common.peripherals.rfid_reader.RFIDReaderPeripheral;
 import mrsalimoc.ioreborn.utils.Registration;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -19,7 +15,6 @@ import net.minecraft.util.Hand;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.Constants;
 import net.minecraftforge.common.util.LazyOptional;
-import org.apache.logging.log4j.Level;
 
 import javax.annotation.Nullable;
 

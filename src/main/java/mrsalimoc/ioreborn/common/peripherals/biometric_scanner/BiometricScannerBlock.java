@@ -1,6 +1,5 @@
 package mrsalimoc.ioreborn.common.peripherals.biometric_scanner;
 
-import mrsalimoc.ioreborn.IOReborn;
 import mrsalimoc.ioreborn.utils.Registration;
 import mrsalimoc.ioreborn.utils.ToolTipUtil;
 import net.minecraft.block.Block;
@@ -21,7 +20,6 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
-import org.apache.logging.log4j.Level;
 
 import javax.annotation.Nullable;
 import java.util.List;
