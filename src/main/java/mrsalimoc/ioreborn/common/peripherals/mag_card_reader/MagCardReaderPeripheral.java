@@ -3,7 +3,6 @@ package mrsalimoc.ioreborn.common.peripherals.mag_card_reader;
 import dan200.computercraft.api.lua.LuaFunction;
 import dan200.computercraft.api.peripheral.IComputerAccess;
 import dan200.computercraft.api.peripheral.IPeripheral;
-import mrsalimoc.ioreborn.common.peripherals.energy_meter.EnergyMeterTileEntity;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

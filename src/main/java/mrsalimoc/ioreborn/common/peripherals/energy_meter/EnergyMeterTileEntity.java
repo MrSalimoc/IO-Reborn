@@ -143,10 +143,11 @@ public class EnergyMeterTileEntity extends TileEntity implements ITickableTileEn
 
     private void transferEnergy(IEnergyStorage input, IEnergyStorage output, Direction direction) {
         this.countBuffer = 0;
-        float energyBuffer, maxTransfer, outputEnergySpaceLeft, outputEnergyStored, inputEnergyStored;
-        outputEnergyStored = output.getEnergyStored();
+        //float energyBuffer, maxTransfer, outputEnergyStored;
+        float outputEnergySpaceLeft, inputEnergyStored;
+        //outputEnergyStored = output.getEnergyStored();
         inputEnergyStored = input.getEnergyStored();
-        maxTransfer = input.getMaxEnergyStored();
+        //maxTransfer = input.getMaxEnergyStored();
         outputEnergySpaceLeft = output.getMaxEnergyStored() - output.getEnergyStored();
 
         if(outputEnergySpaceLeft <= 0.0f || inputEnergyStored <= 0.0f || allowOutput == false) {

@@ -1,0 +1,23 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "gradle",
+			"id": "c:\\Users\\MrSalimoc\\Documents\\IO-RebornrunClientIO-Reborn",
+			"script": "runClient",
+			"description": "",
+			"group": "forgegradle runs",
+			"project": "IO-Reborn",
+			"buildFile": "C:\\Users\\MrSalimoc\\Documents\\IO-Reborn\\build.gradle",
+			"rootProject": "IO-Reborn",
+			"projectFolder": "c:\\Users\\MrSalimoc\\Documents\\IO-Reborn",
+			"workspaceFolder": "c:\\Users\\MrSalimoc\\Documents\\IO-Reborn",
+			"args": "",
+			"javaDebug": false,
+			"problemMatcher": [
+				"$gradle"
+			],
+			"label": "gradle: runClient"
+		}
+	]
+}

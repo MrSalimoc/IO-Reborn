@@ -5,7 +5,6 @@ import mrsalimoc.ioreborn.utils.Registration;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
-import net.minecraft.client.renderer.texture.NativeImage;
 import net.minecraft.client.renderer.tileentity.TileEntityRenderer;
 import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
 import net.minecraft.item.DyeColor;
@@ -34,15 +33,15 @@ public class EnergyMeterTileEntityRenderer extends TileEntityRenderer<EnergyMete
 
         FontRenderer fontrenderer = this.renderer.getFont();
 
-        float f2 = 0.010416667F;
+        //float f2 = 0.010416667F;
         matrixStack.translate(0.0D, (double)0.53333334F, (double)1.001F);
         matrixStack.scale(0.010116667F, -0.010116667F, 0.010116667F);
-        int i = DyeColor.WHITE.getTextColor();
-        double d0 = 0.4D;
-        int j = (int)((double)NativeImage.getR(i) * 0.4D);
-        int k = (int)((double)NativeImage.getG(i) * 0.4D);
-        int l = (int)((double)NativeImage.getB(i) * 0.4D);
-        int i1 = NativeImage.combine(0, l, k, j);
+        //int i = DyeColor.WHITE.getTextColor();
+        //double d0 = 0.4D;
+        //int j = (int)((double)NativeImage.getR(i) * 0.4D);
+        //int k = (int)((double)NativeImage.getG(i) * 0.4D);
+        //int l = (int)((double)NativeImage.getB(i) * 0.4D);
+        //int i1 = NativeImage.combine(0, l, k, j);
 
         String text = te.getRenderMessage();
         if (text != null) {

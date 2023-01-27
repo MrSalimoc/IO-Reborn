@@ -3,7 +3,6 @@ package mrsalimoc.ioreborn.common.peripherals.biometric_scanner;
 import dan200.computercraft.api.lua.LuaFunction;
 import dan200.computercraft.api.peripheral.IComputerAccess;
 import dan200.computercraft.api.peripheral.IPeripheral;
-import mrsalimoc.ioreborn.common.peripherals.rfid_reader.RFIDReaderTileEntity;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
