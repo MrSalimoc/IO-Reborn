@@ -115,8 +115,10 @@ public class MagCardItem extends Item {
     public void appendHoverText(ItemStack p_77624_1_, @Nullable World p_77624_2_, List<ITextComponent> tooltip, ITooltipFlag p_77624_4_) {
         if(p_77624_1_.hasTag()) {
             CompoundNBT nbtTagCompound = p_77624_1_.getTag();
-            if(nbtTagCompound != null || nbtTagCompound.contains("data")) {
-                tooltip.add(1, ITextComponent.nullToEmpty(TextFormatting.GRAY + nbtTagCompound.getString("data")));
+            if(nbtTagCompound != null) {
+                if(nbtTagCompound.contains("data")) {
+                    tooltip.add(1, ITextComponent.nullToEmpty(TextFormatting.GRAY + nbtTagCompound.getString("data")));
+                }
             }
         }
     }
