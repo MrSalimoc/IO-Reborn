@@ -62,7 +62,7 @@ public class IOReborn
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
-        LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().options);
+        //LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().options);
         ClientSetup.init(event);
     }
 
